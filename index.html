@@ -31,13 +31,36 @@
     align-items:center;
 }
 
-nav a{
-    text-decoration:none;
-    color:#12384a;
-    font-weight:bold;
-    font-size:16px;
+.dropdown{
+    position:relative;
 }
-    }
+
+.dropdown-menu{
+    display:none;
+    position:absolute;
+    top:28px;
+    left:50%;
+    transform:translateX(-50%);
+    background:white;
+    min-width:220px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.12);
+    padding:12px;
+    z-index:2000;
+}
+
+.dropdown-menu a{
+    display:block;
+    padding:12px;
+    color:#12384a;
+    text-decoration:none;
+    font-size:15px;
+}
+
+.dropdown:hover .dropdown-menu{
+    display:block;
+
+}
 
     .banner{
       background:#d8eef8;
@@ -156,11 +179,26 @@ target="_blank">
 </a>
 <header>
   <img class="logo" src="nuevologo.JPG">
- <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#especialidades">Especialidades</a>
-    <a href="#promociones">Promociones</a>
-    <a href="#contacto">Contacto</a>
+<nav>
+  <a href="#inicio">Inicio</a>
+
+  <div class="dropdown">
+    <a href="#especialidades">Especialidades ▾</a>
+    <div class="dropdown-menu">
+      <a href="#estetica-orofacial">Estética Orofacial</a>
+      <a href="#odontologia-integral">Odontología Integral</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#promociones">Promociones ▾</a>
+    <div class="dropdown-menu">
+      <a href="#promociones">Ver promociones</a>
+      <a href="#contacto">Consultar promoción</a>
+    </div>
+  </div>
+
+  <a href="#contacto">Contacto</a>
 </nav>
 </header>
 
