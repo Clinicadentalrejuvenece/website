@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios | Clínica Dental Rejuvenece</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family:Arial,sans-serif;
+      background:#f4f8fb;
+      color:#12384a;
+      text-align:center;
+    }
+
+    header{
+      background:white;
+      padding:18px 24px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 10px #ddd;
+    }
+
+    .logo{
+      width:240px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#12384a;
+      font-weight:bold;
+      margin:0 15px;
+      font-size:17px;
+    }
+
+    .agenda{
+      background:#8ed8f8;
+      padding:12px 22px;
+      border-radius:30px;
+    }
+
+    .hero{
+      padding:60px 20px 25px;
+    }
+
+    h1{
+      font-size:42px;
+      margin-bottom:10px;
+    }
+
+    .subtitulo{
+      color:#555;
+      font-size:18px;
+    }
+
+    .servicios{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:28px;
+      padding:40px 60px 70px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:24px;
+      box-shadow:0 4px 18px rgba(0,0,0,0.10);
+    }
+
+    .card h2{
+      color:#2f6f5e;
+      font-size:24px;
+    }
+
+    .card p{
+      color:#555;
+      font-size:16px;
+      line-height:1.6;
+    }
+
+    .boton{
+      display:inline-block;
+      background:#8ed8f8;
+      color:#12384a;
+      text-decoration:none;
+      padding:12px 24px;
+      border-radius:30px;
+      font-weight:bold;
+      margin-top:15px;
+    }
+
+    footer{
+      background:#12384a;
+      color:white;
+      padding:28px;
+    }
+
+    footer p{
+      color:white;
+      margin:6px;
+    }
+
+    @media(max-width:768px){
+      header{
+        flex-direction:column;
+        gap:12px;
+      }
+
+      .logo{
+        width:170px;
+      }
+
+      nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+      }
+
+      nav a{
+        font-size:14px;
+        margin:0;
+      }
+
+      h1{
+        font-size:30px;
+      }
+
+      .servicios{
+        padding:30px 18px 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img class="logo" src="nuevologo.JPG" alt="Logo Clínica Dental Rejuvenece">
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="promociones.html">Promociones</a>
+    <a href="index.html#contacto">Contacto</a>
+    <a class="agenda" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?utm_content=link_in_bio&utm_medium=social&utm_source=ig&modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Nuestros servicios</h1>
+  <p class="subtitulo">Tratamientos dentales y estéticos pensados para cuidar tu sonrisa y armonía facial.</p>
+</section>
+
+<section class="servicios">
+
+  <div class="card">
+    <h2>Odontología integral</h2>
+    <p>Atención dental enfocada en prevención, diagnóstico y tratamiento para mantener una sonrisa sana.</p>
+    <a class="boton" href="https://wa.me/56971453222" target="_blank">Consultar</a>
+  </div>
+
+  <div class="card">
+    <h2>Armonización orofacial</h2>
+    <p>Tratamientos estéticos orientados a realzar la armonía natural del rostro.</p>
+    <a class="boton" href="https://wa.me/56971453222" target="_blank">Consultar</a>
+  </div>
+
+  <div class="card">
+    <h2>Estética orofacial</h2>
+    <p>Procedimientos personalizados para mejorar la apariencia facial de forma armónica y natural.</p>
+    <a class="boton" href="https://wa.me/56971453222" target="_blank">Consultar</a>
+  </div>
+
+  <div class="card">
+    <h2>Limpieza dental</h2>
+    <p>Limpieza profesional para cuidar la salud oral y mantener una sonrisa fresca y luminosa.</p>
+    <a class="boton" href="https://wa.me/56971453222" target="_blank">Consultar</a>
+  </div>
+
+  <div class="card">
+    <h2>Evaluación dental</h2>
+    <p>Primera evaluación para conocer tus necesidades y definir el tratamiento más adecuado.</p>
+    <a class="boton" href="https://wa.me/56971453222" target="_blank">Consultar</a>
+  </div>
+
+  <div class="card">
+    <h2>Tratamientos estéticos</h2>
+    <p>Opciones estéticas para mejorar la confianza, la sonrisa y la armonía del rostro.</p>
+    <a class="boton" href="https://wa.me/56971453222" target="_blank">Consultar</a>
+  </div>
+
+</section>
+
+<footer>
+  <p>Clínica Dental Rejuvenece</p>
+  <p>Av. Los Pajaritos #3195, oficina 1320, piso 13, Santiago, Chile</p>
+  <p>+56 9 7145 3222</p>
+</footer>
+
+</body>
+</html>
