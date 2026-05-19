@@ -90,24 +90,68 @@
     }
 
     .hero{
-      padding:50px 20px;
+      padding:55px 20px 70px;
     }
 
-    /* CARRUSEL */
+    h1{
+      font-size:46px;
+      color:#12384a;
+      margin-bottom:10px;
+    }
+
+    .subtexto{
+      font-size:20px;
+      color:#555;
+      margin-bottom:18px;
+    }
+
+    .botones-home{
+      margin-bottom:45px;
+    }
+
+    p{
+      font-size:18px;
+      color:#555;
+    }
+
+    .boton{
+      display:inline-block;
+      background:#8ed8f8;
+      color:#12384a;
+      text-decoration:none;
+      padding:12px 25px;
+      border-radius:30px;
+      margin:10px;
+      font-weight:bold;
+    }
+
+    .hero-grid{
+      display:flex;
+      justify-content:center;
+      align-items:stretch;
+      gap:35px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+
+    .carousel,
+    .foto-principal{
+      width:50%;
+      height:520px;
+      background:white;
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 4px 18px rgba(0,0,0,0.12);
+    }
 
     .carousel{
       position:relative;
-      width:100%;
-      max-width:900px;
-      margin:30px auto;
-      overflow:hidden;
-      border-radius:20px;
-      box-shadow:0 4px 18px rgba(0,0,0,0.12);
-      background:white;
     }
 
     .carousel-slide{
       display:none;
+      width:100%;
+      height:100%;
       justify-content:center;
       align-items:center;
       background:white;
@@ -119,11 +163,17 @@
 
     .carousel-slide img{
       width:100%;
-      height:auto;
-      max-height:700px;
+      height:100%;
       object-fit:contain;
       display:block;
       background:white;
+    }
+
+    .foto-principal img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
     }
 
     .carousel-btn{
@@ -173,28 +223,6 @@
 
     .dot.active{
       background:#8ed8f8;
-    }
-
-    h1{
-      font-size:42px;
-      color:#12384a;
-      margin-bottom:10px;
-    }
-
-    p{
-      font-size:18px;
-      color:#555;
-    }
-
-    .boton{
-      display:inline-block;
-      background:#8ed8f8;
-      color:#12384a;
-      text-decoration:none;
-      padding:12px 25px;
-      border-radius:30px;
-      margin:10px;
-      font-weight:bold;
     }
 
     .ubicacion{
@@ -290,8 +318,6 @@
       z-index:1000;
     }
 
-    /* CELULAR */
-
     @media (max-width:768px){
 
       header{
@@ -338,17 +364,48 @@
       }
 
       .hero{
-        padding:25px 15px;
+        padding:30px 15px 45px;
       }
 
-      .carousel{
-        max-width:95%;
-        margin:20px auto;
+      h1{
+        font-size:28px;
+        line-height:1.2;
+      }
+
+      .subtexto{
+        font-size:15px;
+        margin-bottom:12px;
+      }
+
+      .botones-home{
+        margin-bottom:25px;
+      }
+
+      .boton{
+        padding:10px 18px;
+        font-size:14px;
+        margin:6px;
+      }
+
+      .hero-grid{
+        flex-direction:column;
+        gap:22px;
+        max-width:100%;
+      }
+
+      .carousel,
+      .foto-principal{
+        width:100%;
+        height:360px;
+        border-radius:18px;
       }
 
       .carousel-slide img{
-        height:auto;
-        max-height:400px;
+        object-fit:contain;
+      }
+
+      .foto-principal img{
+        object-fit:cover;
       }
 
       .carousel-btn{
@@ -357,19 +414,8 @@
         font-size:22px;
       }
 
-      h1{
-        font-size:26px;
-        line-height:1.2;
-      }
-
       p{
         font-size:15px;
-      }
-
-      .boton{
-        padding:10px 18px;
-        font-size:14px;
-        margin:6px;
       }
 
       .ubicacion{
@@ -463,44 +509,54 @@
 
 <section class="hero" id="inicio">
 
-  <!-- CARRUSEL -->
+  <h1>Clínica Dental Rejuvenece</h1>
 
-  <div class="carousel">
+  <p class="subtexto">
+    Belleza, salud y confianza en tu sonrisa.
+  </p>
 
-    <div class="carousel-slide active">
-      <img src="nariz.jpg">
+  <div class="botones-home">
+    <a class="boton" href="https://instagram.com/rejuvenece__" target="_blank">
+      Instagram
+    </a>
+
+    <a class="boton" href="https://wa.me/56971453222" target="_blank">
+      WhatsApp
+    </a>
+  </div>
+
+  <div class="hero-grid">
+
+    <div class="carousel">
+
+      <div class="carousel-slide active">
+        <img src="nariz.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="nariz1.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="nariz2.jpg">
+      </div>
+
+      <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
+      <button class="carousel-btn next" onclick="moveSlide(1)">›</button>
+
+      <div class="dots">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
+
     </div>
 
-    <div class="carousel-slide">
-      <img src="nariz1.jpg">
-    </div>
-
-    <div class="carousel-slide">
-      <img src="nariz2.jpg">
-    </div>
-
-    <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
-    <button class="carousel-btn next" onclick="moveSlide(1)">›</button>
-
-    <div class="dots">
-      <span class="dot active" onclick="currentSlide(0)"></span>
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
+    <div class="foto-principal">
+      <img src="yo.jpg">
     </div>
 
   </div>
-
-  <h1>Clínica Dental Rejuvenece</h1>
-
-  <p>Belleza, salud y confianza en tu sonrisa.</p>
-
-  <a class="boton" href="https://instagram.com/rejuvenece__" target="_blank">
-    Instagram
-  </a>
-
-  <a class="boton" href="https://wa.me/56971453222" target="_blank">
-    WhatsApp
-  </a>
 
 </section>
 
