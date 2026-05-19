@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Promociones | Clínica Dental Rejuvenece</title>
 
@@ -63,7 +64,6 @@
       border-radius:22px;
       box-shadow:0 4px 18px rgba(0,0,0,0.12);
       transition:0.3s;
-      position:relative;
     }
 
     .promo:hover{
@@ -79,7 +79,7 @@
     .promo p{
       color:#555;
       font-size:16px;
-      line-height:1.5;
+      line-height:1.6;
     }
 
     .precio{
@@ -97,6 +97,11 @@
       padding:12px 25px;
       border-radius:30px;
       font-weight:bold;
+      transition:0.3s;
+    }
+
+    .boton:hover{
+      background:#6fc9f0;
     }
 
     .info-extra{
@@ -107,10 +112,9 @@
       background:#eaf8f5;
       border-radius:15px;
       margin-top:15px;
-      padding:0 15px;
       color:#12384a;
       font-size:15px;
-      line-height:1.5;
+      line-height:1.6;
     }
 
     .promo-cumple:hover .info-extra{
@@ -131,6 +135,7 @@
     }
 
     @media(max-width:768px){
+
       header{
         flex-direction:column;
         gap:10px;
@@ -176,35 +181,57 @@
 
 <section class="hero">
   <h1>Promociones Clínica Dental Rejuvenece</h1>
-  <p class="subtitulo">Aprovecha nuestras promociones especiales y agenda tu atención.</p>
+
+  <p class="subtitulo">
+    Aprovecha nuestras promociones especiales y agenda tu atención.
+  </p>
 </section>
 
 <section class="promociones">
 
   <div class="promo">
     <h2>Mes de la Mamá</h2>
-    <p>Regalonea a mamá con salud, belleza y confianza durante este mes especial.</p>
-    <div class="precio">Promoción especial</div>
-    <a class="boton" href="https://wa.me/56971453222" target="_blank">Agendar</a>
+
+    <p>
+      Regalonea a mamá con salud, belleza y confianza durante este mes especial.
+    </p>
+
+    <div class="precio">
+      Promoción especial
+    </div>
+
+    <a class="boton" href="https://wa.me/56971453222" target="_blank">
+      Agendar
+    </a>
   </div>
 
   <div class="promo promo-cumple">
+
     <h2>Descuento por tu Cumpleaños</h2>
-    <p>Disfruta un beneficio especial en el mes de tu cumpleaños.</p>
-    <div class="precio">10% de descuento</div>
+
+    <p>
+      Disfruta un beneficio especial en el mes de tu cumpleaños.
+    </p>
+
+    <div class="precio">
+      10% de descuento
+    </div>
 
     <div class="info-extra">
       Yendo a Clínica Rejuvenece el día de tu cumpleaños, con agendación previa, obtén un 10% de descuento en cualquier tratamiento.
     </div>
 
-    <a class="boton" href="https://wa.me/56971453222" target="_blank">Agendar</a>
+    <a class="boton" href="https://wa.me/56971453222" target="_blank">
+      Agendar
+    </a>
+
   </div>
 
 </section>
 
 <footer>
   <p>Clínica Dental Rejuvenece</p>
-  <p>Av. Los Pajaritos #3195, Of 1320, Piso 13, Santiago, Chile</p>
+  <p>Av. Los Pajaritos #3195, Of. 1320, Piso 13, Santiago, Chile</p>
   <p>+56 9 7145 3222</p>
 </footer>
 
