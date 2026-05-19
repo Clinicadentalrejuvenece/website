@@ -134,8 +134,6 @@
       margin:0 auto;
     }
 
-    /* SIN BORDES */
-
     .carousel,
     .foto-principal{
       width:50%;
@@ -192,17 +190,8 @@
       z-index:10;
     }
 
-    .carousel-btn:hover{
-      background:white;
-    }
-
-    .prev{
-      left:15px;
-    }
-
-    .next{
-      right:15px;
-    }
+    .prev{ left:15px; }
+    .next{ right:15px; }
 
     .dots{
       position:absolute;
@@ -229,49 +218,49 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      gap:60px;
-      padding:70px 80px;
+      gap:35px;
+      padding:45px 60px;
       background:white;
       text-align:left;
     }
 
     .mapa-lado{
-      width:50%;
+      width:42%;
     }
 
     .mapa-img{
       width:100%;
-      max-width:520px;
+      max-width:390px;
       box-shadow:none;
       border-radius:0;
     }
 
     .texto-lado{
-      width:40%;
+      width:38%;
     }
 
     .texto-lado h2{
       color:#2f6f5e;
-      font-size:42px;
-      margin-bottom:20px;
+      font-size:34px;
+      margin-bottom:15px;
     }
 
     .texto-lado h3{
-      font-size:24px;
-      margin-bottom:25px;
+      font-size:22px;
+      margin-bottom:18px;
     }
 
     .texto-lado p{
       color:#333;
-      font-size:18px;
-      line-height:1.6;
+      font-size:16px;
+      line-height:1.5;
     }
 
     .link-mapa{
       display:inline-block;
       color:#2f6f5e;
       font-weight:bold;
-      margin:15px 0;
+      margin:12px 0;
     }
 
     footer{
@@ -292,7 +281,10 @@
 
     .footer-contenido p{
       color:white;
-      margin:8px 0;
+      margin:10px 0;
+      display:flex;
+      align-items:center;
+      gap:10px;
     }
 
     .footer-contenido a{
@@ -300,22 +292,31 @@
       text-decoration:none;
     }
 
+    .icono-footer{
+      width:22px;
+      height:22px;
+      object-fit:contain;
+    }
+
     .whatsapp{
       position:fixed;
       bottom:20px;
       left:20px;
-      background:#25D366;
-      color:white;
+      background:white;
       width:60px;
       height:60px;
       border-radius:50%;
       display:flex;
       align-items:center;
       justify-content:center;
-      font-size:32px;
-      text-decoration:none;
       box-shadow:0 4px 10px rgba(0,0,0,0.2);
       z-index:1000;
+    }
+
+    .whatsapp img{
+      width:38px;
+      height:38px;
+      object-fit:contain;
     }
 
     @media (max-width:768px){
@@ -351,10 +352,6 @@
       .dropdown-menu a{
         font-size:13px;
         padding:8px;
-      }
-
-      .banner{
-        padding:10px 8px;
       }
 
       .banner span{
@@ -400,8 +397,8 @@
 
       .ubicacion{
         flex-direction:column;
-        padding:35px 18px;
-        gap:24px;
+        padding:30px 18px;
+        gap:20px;
         text-align:center;
       }
 
@@ -411,16 +408,16 @@
       }
 
       .mapa-img{
-        width:90%;
-        max-width:320px;
+        width:85%;
+        max-width:280px;
       }
 
       .texto-lado h2{
-        font-size:28px;
+        font-size:26px;
       }
 
       .texto-lado h3{
-        font-size:20px;
+        font-size:19px;
       }
 
       .texto-lado p{
@@ -437,15 +434,20 @@
       }
 
       .footer-contenido p{
+        justify-content:center;
         font-size:14px;
       }
 
       .whatsapp{
         width:48px;
         height:48px;
-        font-size:24px;
         bottom:14px;
         left:14px;
+      }
+
+      .whatsapp img{
+        width:30px;
+        height:30px;
       }
     }
   </style>
@@ -453,7 +455,9 @@
 
 <body>
 
-<a class="whatsapp" href="https://wa.me/56971453222" target="_blank">💬</a>
+<a class="whatsapp" href="https://wa.me/56971453222" target="_blank">
+  <img src="wsp.jpg" alt="WhatsApp">
+</a>
 
 <header>
   <img class="logo" src="nuevologo.JPG">
@@ -463,21 +467,13 @@
 
     <div class="dropdown">
       <a href="#especialidades">Especialidades ▾</a>
-
       <div class="dropdown-menu">
         <a href="#estetica-orofacial">Estética Orofacial</a>
         <a href="#odontologia-integral">Odontología Integral</a>
       </div>
     </div>
 
-    <div class="dropdown">
-      <a href="#promociones">Promociones ▾</a>
-
-      <div class="dropdown-menu">
-        <a href="#promociones">Ver promociones</a>
-        <a href="#contacto">Consultar promoción</a>
-      </div>
-    </div>
+    <a href="promociones.html">Promociones</a>
 
     <a href="#contacto">Contacto</a>
   </nav>
@@ -496,19 +492,13 @@
   </p>
 
   <div class="botones-home">
-    <a class="boton" href="https://instagram.com/rejuvenece__" target="_blank">
-      Instagram
-    </a>
-
-    <a class="boton" href="https://wa.me/56971453222" target="_blank">
-      WhatsApp
-    </a>
+    <a class="boton" href="https://instagram.com/rejuvenece__" target="_blank">Instagram</a>
+    <a class="boton" href="https://wa.me/56971453222" target="_blank">WhatsApp</a>
   </div>
 
   <div class="hero-grid">
 
     <div class="carousel">
-
       <div class="carousel-slide active">
         <img src="nariz.jpg">
       </div>
@@ -529,7 +519,6 @@
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
       </div>
-
     </div>
 
     <div class="foto-principal">
@@ -544,50 +533,32 @@
 
   <div class="mapa-lado">
     <a href="https://www.google.com/maps/search/?api=1&query=Av.%20Los%20Pajaritos%203195%20Of%201320%20Santiago%20Chile" target="_blank">
-
       <img src="mapa.png" class="mapa-img">
-
     </a>
   </div>
 
   <div class="texto-lado">
-
     <h2>Encuéntranos</h2>
-
     <h3>Clínica Dental Rejuvenece</h3>
 
-    <p>
-      Av. Los Pajaritos #3195, Of 1320,
-      Piso 13, Santiago, Chile.
-    </p>
+    <p>Av. Los Pajaritos #3195, Of 1320, Piso 13, Santiago, Chile.</p>
 
     <a class="link-mapa"
     href="https://www.google.com/maps/search/?api=1&query=Av.%20Los%20Pajaritos%203195%20Of%201320%20Santiago%20Chile"
     target="_blank">
-
       Cómo llegar →
-
     </a>
 
-    <p>
-      Agenda tu hora por WhatsApp
-      o contáctanos por Instagram.
-    </p>
+    <p>Agenda tu hora por WhatsApp o contáctanos por Instagram.</p>
 
-    <a class="boton"
-    href="https://wa.me/56971453222"
-    target="_blank">
-
+    <a class="boton" href="https://wa.me/56971453222" target="_blank">
       Reserva tu hora
-
     </a>
-
   </div>
 
 </section>
 
 <footer>
-
   <div class="footer-contenido">
 
     <div>
@@ -596,30 +567,31 @@
     </div>
 
     <div>
-      <p>📍 Av. Los Pajaritos #3195, Of 1320, Piso 13, Santiago, Chile</p>
-      <p>📞 +56 9 7145 3222</p>
+      <p>
+        <img class="icono-footer" src="logom.jpg" alt="Ubicación">
+        Av. Los Pajaritos #3195, Of 1320, Piso 13, Santiago, Chile
+      </p>
 
       <p>
-        📸
-        <a href="https://instagram.com/rejuvenece__" target="_blank">
-          @Rejuvenece__
-        </a>
+        <img class="icono-footer" src="wsp.jpg" alt="WhatsApp">
+        +56 9 7145 3222
+      </p>
+
+      <p>
+        <img class="icono-footer" src="insta.jpg" alt="Instagram">
+        <a href="https://instagram.com/rejuvenece__" target="_blank">@Rejuvenece__</a>
       </p>
     </div>
 
   </div>
-
 </footer>
 
 <script>
-
 let slideIndex = 0;
-
 const slides = document.querySelectorAll(".carousel-slide");
 const dots = document.querySelectorAll(".dot");
 
 function showSlide(index){
-
   if(index >= slides.length){
     slideIndex = 0;
   }
@@ -649,7 +621,6 @@ setInterval(function(){
   slideIndex++;
   showSlide(slideIndex);
 }, 4000);
-
 </script>
 
 </body>
