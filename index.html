@@ -1,66 +1,131 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Clínica Dental Rejuvenece</title>
-
   <style>
-
     body{
-      background:white;
-      color:111;
+      margin:0;
       font-family:Arial;
+      background:#f4f8fb;
+      color:#222;
       text-align:center;
-      padding:40px;
+    }
+
+    header{
+      background:white;
+      padding:18px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 10px #ddd;
+    }
+
+    .logo{
+      width:90px;
+    }
+
+    nav a{
+      color:#333;
+      text-decoration:none;
+      margin:0 12px;
+      font-weight:bold;
+      font-size:14px;
+    }
+
+    .banner{
+      background:#d8eef8;
+      padding:14px;
+      color:#1b6f8f;
+      font-weight:bold;
+    }
+
+    .hero{
+      padding:60px 20px;
+    }
+
+    .hero img{
+      width:260px;
+      border-radius:20px;
+      margin-bottom:20px;
     }
 
     h1{
       font-size:42px;
+      color:#12384a;
+      margin-bottom:10px;
     }
 
     p{
-      color:#111;
       font-size:18px;
+      color:#555;
     }
 
-    a{
-      display:block;
-      background:#111;
-      color:white;
+    .boton{
+      display:inline-block;
+      background:#8ed8f8;
+      color:#12384a;
       text-decoration:none;
-      margin:15px 0;
-      padding:10px;
-      width:180px;
-      border-radius:14px;
-      font-size:20px;
+      padding:12px 25px;
+      border-radius:30px;
+      margin:10px;
+      font-weight:bold;
     }
 
-    a:hover{
-      background:#333;
+    .seccion{
+      background:white;
+      margin:30px auto;
+      padding:35px;
+      width:80%;
+      border-radius:20px;
+      box-shadow:0 4px 12px #ddd;
     }
 
+    footer{
+      background:#12384a;
+      color:white;
+      padding:25px;
+      margin-top:40px;
+    }
   </style>
 </head>
 
 <body>
-<img src="logoooooo.JPG" width="200">
+
+<header>
+  <img class="logo" src="logoooooo.JPG">
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Contacto</a>
+  </nav>
+</header>
+
+<div class="banner">
+  Odontología Integral y Armonización Orofacial
+</div>
+
+<section class="hero">
+  <img src="logoooooo.JPG">
   <h1>Clínica Dental Rejuvenece</h1>
-  
-  <p>Especialistas en estética dental y rejuvenecimiento</p>
-  
-  <br><br><br>
+  <p>Belleza, salud y confianza en tu sonrisa.</p>
 
-  <a href="https://instagram.com/rejuvenece__">
-    Instagram
-  </a>
+  <a class="boton" href="https://instagram.com/rejuvenece__">Instagram</a>
+  <a class="boton" href="https://wa.me/56971453222">WhatsApp</a>
+</section>
 
-  <a href="https://wa.me/56971453222">
-    WhatsApp
-  </a>
+<section class="seccion">
+  <h2>Especialidades</h2>
+  <p> Estética Facil • Estética Dental</p>
+</section>
 
+<section class="seccion">
+  <h2>Contacto</h2>
+  <p>Agenda tu hora por WhatsApp o visita nuestro Instagram.</p>
+</section>
 
+<footer>
+  Clínica Dental Rejuvenece
+</footer>
 
 </body>
 </html>
- 
-  
