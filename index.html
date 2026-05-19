@@ -8,32 +8,65 @@
     body{margin:0;font-family:Arial,sans-serif;background:#f4f8fb;color:#222;text-align:center;}
 
     header{
-      background:white;padding:18px 24px;display:flex;justify-content:space-between;
-      align-items:center;gap:40px;box-shadow:0 2px 10px #ddd;
+      background:white;
+      padding:18px 24px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:35px;
+      box-shadow:0 2px 10px #ddd;
+      position:relative;
+      z-index:3000;
     }
 
-    .logo{width:230px;margin-left:10px;}
+    .logo{width:280px;margin-left:10px;}
 
-    nav{display:flex;gap:35px;align-items:center;}
-    nav a{text-decoration:none;color:#12384a;font-weight:bold;font-size:18px;}
-
-    .dropdown{position:relative;}
-    .dropdown-menu{
-      display:none;position:absolute;top:28px;left:50%;transform:translateX(-50%);
-      background:white;min-width:220px;border-radius:18px;
-      box-shadow:0 8px 25px rgba(0,0,0,0.12);padding:12px;z-index:2000;
+    nav{
+      display:flex;
+      gap:28px;
+      align-items:center;
     }
-    .dropdown-menu a{display:block;padding:12px;color:#12384a;font-size:15px;}
-    .dropdown:hover .dropdown-menu{display:block;}
+
+    nav a{
+      text-decoration:none;
+      color:#12384a;
+      font-weight:bold;
+      font-size:18px;
+    }
+
+    .agenda-header{
+      background:#8ed8f8;
+      color:#12384a;
+      padding:12px 22px;
+      border-radius:30px;
+      font-weight:bold;
+    }
+
+    .menu-toggle{
+      display:none;
+      background:none;
+      border:none;
+      font-size:34px;
+      color:#12384a;
+      cursor:pointer;
+    }
 
     .banner{
-      background:#d8eef8;padding:14px;color:#1b6f8f;font-weight:bold;
-      display:flex;justify-content:center;align-items:center;
-      border-top:1px solid #c7dfe8;border-bottom:1px solid #c7dfe8;
+      background:#d8eef8;
+      padding:14px;
+      color:#1b6f8f;
+      font-weight:bold;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      border-top:1px solid #c7dfe8;
+      border-bottom:1px solid #c7dfe8;
     }
 
     .banner span{
-      background:white;padding:10px 25px;border-radius:30px;
+      background:white;
+      padding:10px 25px;
+      border-radius:30px;
       box-shadow:0 2px 10px rgba(0,0,0,0.08);
     }
 
@@ -45,63 +78,102 @@
     p{font-size:18px;color:#555;}
 
     .boton{
-      display:inline-block;background:#8ed8f8;color:#12384a;text-decoration:none;
-      padding:12px 25px;border-radius:30px;margin:10px;font-weight:bold;
+      display:inline-block;
+      background:#8ed8f8;
+      color:#12384a;
+      text-decoration:none;
+      padding:12px 25px;
+      border-radius:30px;
+      margin:10px;
+      font-weight:bold;
     }
 
     .hero-grid{
-      display:flex;justify-content:center;align-items:stretch;
-      gap:35px;max-width:1200px;margin:0 auto;
+      display:flex;
+      justify-content:center;
+      align-items:stretch;
+      gap:35px;
+      max-width:1200px;
+      margin:0 auto;
     }
 
     .carousel,.foto-principal{
-      width:50%;height:520px;overflow:hidden;background:transparent;
-      box-shadow:none;border-radius:0;
+      width:50%;
+      height:520px;
+      overflow:hidden;
+      background:transparent;
+      box-shadow:none;
+      border-radius:0;
     }
 
     .carousel{position:relative;}
     .carousel-slide{display:none;width:100%;height:100%;justify-content:center;align-items:center;}
     .carousel-slide.active{display:flex;}
     .carousel-slide img{width:100%;height:100%;object-fit:contain;display:block;}
+
     .foto-principal img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center 30%;
-  display:block;
-}
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 30%;
+      display:block;
+    }
 
     .carousel-btn{
-      position:absolute;top:50%;transform:translateY(-50%);
-      background:rgba(255,255,255,0.85);border:none;color:#12384a;
-      font-size:28px;width:42px;height:42px;border-radius:50%;
-      cursor:pointer;font-weight:bold;z-index:10;
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      background:rgba(255,255,255,0.85);
+      border:none;
+      color:#12384a;
+      font-size:28px;
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      cursor:pointer;
+      font-weight:bold;
+      z-index:10;
     }
 
     .prev{left:15px;}
     .next{right:15px;}
 
     .dots{
-      position:absolute;bottom:15px;width:100%;display:flex;
-      justify-content:center;gap:8px;
+      position:absolute;
+      bottom:15px;
+      width:100%;
+      display:flex;
+      justify-content:center;
+      gap:8px;
     }
 
     .dot{
-      width:11px;height:11px;border-radius:50%;
-      background:rgba(255,255,255,0.7);cursor:pointer;
+      width:11px;
+      height:11px;
+      border-radius:50%;
+      background:rgba(255,255,255,0.7);
+      cursor:pointer;
     }
 
     .dot.active{background:#8ed8f8;}
 
     .ubicacion{
-      display:flex;align-items:center;justify-content:center;gap:45px;
-      padding:50px 55px;background:white;text-align:left;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:45px;
+      padding:50px 55px;
+      background:white;
+      text-align:left;
     }
 
     .mapa-lado{width:40%;}
 
     .mapa-img{
-      width:100%;max-width:360px;box-shadow:none;border-radius:0;
+      width:100%;
+      max-width:360px;
+      box-shadow:none;
+      border-radius:0;
     }
 
     .texto-lado{
@@ -113,28 +185,45 @@
     }
 
     .texto-lado h2{
-      color:#2f6f5e;font-size:38px;margin:0 0 10px;
+      color:#2f6f5e;
+      font-size:38px;
+      margin:0 0 10px;
     }
 
     .texto-lado h3{
-      font-size:24px;margin:0 0 18px;color:#12384a;
+      font-size:24px;
+      margin:0 0 18px;
+      color:#12384a;
     }
 
     .texto-lado p{
-      color:#333;font-size:17px;line-height:1.6;margin:14px 0;
+      color:#333;
+      font-size:17px;
+      line-height:1.6;
+      margin:14px 0;
     }
 
     .link-mapa{
-      display:inline-block;color:#2f6f5e;font-weight:bold;margin:12px 0;
+      display:inline-block;
+      color:#2f6f5e;
+      font-weight:bold;
+      margin:12px 0;
     }
 
     footer{
-      background:#12384a;color:white;padding:28px 22px;margin-top:25px;
+      background:#12384a;
+      color:white;
+      padding:28px 22px;
+      margin-top:25px;
     }
 
     .footer-contenido{
-      display:flex;justify-content:space-around;align-items:center;
-      gap:25px;flex-wrap:wrap;text-align:left;
+      display:flex;
+      justify-content:space-around;
+      align-items:center;
+      gap:25px;
+      flex-wrap:wrap;
+      text-align:left;
     }
 
     .footer-contenido h3{margin:0 0 8px;}
@@ -142,56 +231,96 @@
     .footer-contenido a{color:#9ee7ff;text-decoration:none;}
 
     .contacto-linea{
-      display:flex;align-items:center;gap:10px;margin:7px 0;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin:7px 0;
     }
 
     .icono-footer{
-      width:24px;height:24px;object-fit:contain;border-radius:0;
+      width:24px;
+      height:24px;
+      object-fit:contain;
+      border-radius:0;
     }
 
     .whatsapp{
-      position:fixed;bottom:20px;left:20px;background:white;
-      width:60px;height:60px;border-radius:50%;
-      display:flex;align-items:center;justify-content:center;
-      box-shadow:0 4px 10px rgba(0,0,0,0.2);z-index:1000;
+      position:fixed;
+      bottom:20px;
+      left:20px;
+      background:white;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+      z-index:1000;
     }
 
     .whatsapp img{width:38px;height:38px;object-fit:contain;}
 
     @media (max-width:768px){
       header{
-        flex-direction:column;
-        gap:10px;
-        padding:18px 8px 12px;
+        flex-direction:row;
+        padding:14px 16px;
       }
 
       .logo{
-        width:165px;
+        width:185px;
         margin-left:0;
       }
 
-      nav{
-        flex-direction:row;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:12px 16px;
+      .menu-toggle{
+        display:block;
       }
 
-      nav a{font-size:14px;}
+      nav{
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        gap:0;
+        box-shadow:0 8px 18px rgba(0,0,0,0.12);
+        padding:15px 0;
+      }
 
-      .dropdown-menu{top:24px;min-width:165px;padding:8px;}
-      .dropdown-menu a{font-size:13px;padding:8px;}
+      nav.active{
+        display:flex;
+      }
 
-      .banner span{font-size:14px;padding:8px 14px;max-width:88%;}
+      nav a{
+        font-size:18px;
+        padding:14px 0;
+      }
+
+      .agenda-header{
+        margin-top:8px;
+        padding:12px 24px;
+      }
+
+      .banner span{
+        font-size:14px;
+        padding:8px 14px;
+        max-width:88%;
+      }
 
       .hero{padding:30px 15px 45px;}
       h1{font-size:28px;line-height:1.2;}
       .subtexto{font-size:15px;}
 
-      .hero-grid{flex-direction:column;gap:22px;}
+      .hero-grid{
+        flex-direction:column;
+        gap:22px;
+      }
 
       .carousel,.foto-principal{
-        width:100%;height:360px;
+        width:100%;
+        height:360px;
       }
 
       .carousel-btn{width:34px;height:34px;font-size:22px;}
@@ -218,21 +347,9 @@
         border-radius:0;
       }
 
-      .texto-lado h2{
-        font-size:30px;
-        margin-bottom:10px;
-      }
-
-      .texto-lado h3{
-        font-size:21px;
-        margin-bottom:12px;
-      }
-
-      .texto-lado p{
-        font-size:15px;
-        line-height:1.5;
-        margin:12px 0;
-      }
+      .texto-lado h2{font-size:30px;margin-bottom:10px;}
+      .texto-lado h3{font-size:21px;margin-bottom:12px;}
+      .texto-lado p{font-size:15px;line-height:1.5;margin:12px 0;}
 
       footer{
         padding:22px 15px;
@@ -245,15 +362,8 @@
         gap:14px;
       }
 
-      .footer-contenido h3{
-        font-size:20px;
-        margin-bottom:6px;
-      }
-
-      .footer-contenido p{
-        font-size:14px;
-        margin:4px 0;
-      }
+      .footer-contenido h3{font-size:20px;margin-bottom:6px;}
+      .footer-contenido p{font-size:14px;margin:4px 0;}
 
       .contacto-linea{
         justify-content:center;
@@ -262,13 +372,13 @@
         gap:8px;
       }
 
-      .icono-footer{
-        width:22px;
-        height:22px;
-      }
+      .icono-footer{width:22px;height:22px;}
 
       .whatsapp{
-        width:48px;height:48px;bottom:14px;left:14px;
+        width:48px;
+        height:48px;
+        bottom:14px;
+        left:14px;
       }
 
       .whatsapp img{width:30px;height:30px;}
@@ -285,19 +395,14 @@
 <header>
   <img class="logo" src="nuevologo.JPG" alt="Logo Clínica Dental Rejuvenece">
 
-  <nav>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <nav id="menu">
     <a href="#inicio">Inicio</a>
-
-    <div class="dropdown">
-      <a href="#especialidades">Especialidades ▾</a>
-      <div class="dropdown-menu">
-        <a href="#estetica-orofacial">Estética Orofacial</a>
-        <a href="#odontologia-integral">Odontología Integral</a>
-      </div>
-    </div>
-
+    <a href="servicios.html">Servicios</a>
     <a href="promociones.html">Promociones</a>
     <a href="#contacto">Contacto</a>
+    <a class="agenda-header" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?utm_content=link_in_bio&utm_medium=social&utm_source=ig&modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a>
   </nav>
 </header>
 
@@ -443,6 +548,10 @@ setInterval(function(){
   slideIndex++;
   showSlide(slideIndex);
 }, 4000);
+
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
 </script>
 
 </body>
