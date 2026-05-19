@@ -9,7 +9,7 @@
 
     header{
       background:white;
-      padding:18px 24px;
+      padding:6px 24px;
       display:flex;
       justify-content:space-between;
       align-items:center;
@@ -17,19 +17,17 @@
       box-shadow:0 2px 10px #ddd;
       position:relative;
       z-index:3000;
+      min-height:95px;
     }
 
     .logo{
-      width:320px;
+      width:230px;
+      max-height:90px;
+      object-fit:contain;
       margin-left:10px;
-      transition:0.3s;
     }
 
-    nav{
-      display:flex;
-      gap:28px;
-      align-items:center;
-    }
+    nav{display:flex;gap:28px;align-items:center;}
 
     nav a{
       text-decoration:none;
@@ -171,11 +169,11 @@
       text-align:left;
     }
 
-    .mapa-lado{width:40%;}
+    .mapa-lado{width:42%;}
 
     .mapa-img{
       width:100%;
-      max-width:360px;
+      max-width:450px;
       box-shadow:none;
       border-radius:0;
     }
@@ -235,53 +233,41 @@
     .footer-contenido a{color:#9ee7ff;text-decoration:none;}
 
     .contacto-linea{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      margin:7px 0;
-    }
-
-    .icono-footer{
-      width:24px;
-      height:24px;
-      object-fit:contain;
-      border-radius:0;
+      margin:6px 0;
+      color:white;
     }
 
     .whatsapp{
       position:fixed;
       bottom:20px;
       left:20px;
-      background:white;
+      background:#25D366;
+      color:white;
       width:60px;
       height:60px;
       border-radius:50%;
       display:flex;
       align-items:center;
       justify-content:center;
+      font-size:32px;
+      text-decoration:none;
       box-shadow:0 4px 10px rgba(0,0,0,0.2);
       z-index:1000;
     }
 
-    .whatsapp img{width:38px;height:38px;object-fit:contain;}
-
     @media (max-width:768px){
       header{
-        flex-direction:row;
-        justify-content:space-between;
-        align-items:center;
-        padding:14px 18px;
+        padding:6px 14px;
+        min-height:88px;
       }
 
       .logo{
-        width:240px;
-        margin:0 auto;
-        display:block;
+        width:210px;
+        max-height:82px;
+        margin:0;
       }
 
-      .menu-toggle{
-        display:block;
-      }
+      .menu-toggle{display:block;}
 
       nav{
         display:none;
@@ -296,9 +282,7 @@
         padding:15px 0;
       }
 
-      nav.active{
-        display:flex;
-      }
+      nav.active{display:flex;}
 
       nav a{
         font-size:18px;
@@ -343,8 +327,8 @@
       .mapa-lado,.texto-lado{width:100%;}
 
       .mapa-img{
-        width:82%;
-        max-width:260px;
+        width:90%;
+        max-width:340px;
       }
 
       .texto-lado{
@@ -373,31 +357,24 @@
       .footer-contenido p{font-size:14px;margin:4px 0;}
 
       .contacto-linea{
-        justify-content:center;
         font-size:14px;
-        margin:2px 0;
-        gap:8px;
+        margin:4px 0;
       }
-
-      .icono-footer{width:22px;height:22px;}
 
       .whatsapp{
         width:48px;
         height:48px;
+        font-size:24px;
         bottom:14px;
         left:14px;
       }
-
-      .whatsapp img{width:30px;height:30px;}
     }
   </style>
 </head>
 
 <body>
 
-<a class="whatsapp" href="https://wa.me/56971453222" target="_blank">
-  <img src="logowsp.jpg" alt="WhatsApp">
-</a>
+<a class="whatsapp" href="https://wa.me/56971453222" target="_blank">💬</a>
 
 <header>
   <img class="logo" src="nuevologo.JPG" alt="Logo Clínica Dental Rejuvenece">
@@ -421,9 +398,7 @@
 
   <h1>Clínica Dental Rejuvenece</h1>
 
-  <p class="subtexto">
-    Belleza, salud y confianza en tu sonrisa.
-  </p>
+  <p class="subtexto">Belleza, salud y confianza en tu sonrisa.</p>
 
   <div class="botones-home">
     <a class="boton" href="https://instagram.com/rejuvenece__" target="_blank">Instagram</a>
@@ -501,18 +476,9 @@
     </div>
 
     <div>
+      <div class="contacto-linea">Av. Los Pajaritos #3195, oficina 1320, piso 13, Santiago, Chile</div>
+      <div class="contacto-linea">+56 9 7145 3222</div>
       <div class="contacto-linea">
-        <img class="icono-footer" src="logom.jpg" alt="Ubicación">
-        <span>Av. Los Pajaritos #3195, oficina 1320, piso 13, Santiago, Chile</span>
-      </div>
-
-      <div class="contacto-linea">
-        <img class="icono-footer" src="logowsp.jpg" alt="WhatsApp">
-        <span>+56 9 7145 3222</span>
-      </div>
-
-      <div class="contacto-linea">
-        <img class="icono-footer" src="iglogo.jpg" alt="Instagram">
         <a href="https://instagram.com/rejuvenece__" target="_blank">@Rejuvenece__</a>
       </div>
     </div>
@@ -526,13 +492,8 @@ const slides = document.querySelectorAll(".carousel-slide");
 const dots = document.querySelectorAll(".dot");
 
 function showSlide(index){
-  if(index >= slides.length){
-    slideIndex = 0;
-  }
-
-  if(index < 0){
-    slideIndex = slides.length - 1;
-  }
+  if(index >= slides.length){ slideIndex = 0; }
+  if(index < 0){ slideIndex = slides.length - 1; }
 
   slides.forEach(slide => slide.classList.remove("active"));
   dots.forEach(dot => dot.classList.remove("active"));
