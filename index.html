@@ -41,7 +41,9 @@
       font-size:18px;
     }
 
-    .dropdown{ position:relative; }
+    .dropdown{
+      position:relative;
+    }
 
     .dropdown-menu{
       display:none;
@@ -64,7 +66,9 @@
       font-size:15px;
     }
 
-    .dropdown:hover .dropdown-menu{ display:block; }
+    .dropdown:hover .dropdown-menu{
+      display:block;
+    }
 
     .banner{
       background:#d8eef8;
@@ -89,37 +93,44 @@
       padding:50px 20px;
     }
 
+    /* CARRUSEL */
+
     .carousel{
       position:relative;
       width:100%;
-      max-width:750px;
+      max-width:900px;
       margin:30px auto;
       overflow:hidden;
-      border-radius:0;
+      border-radius:20px;
       box-shadow:0 4px 18px rgba(0,0,0,0.12);
       background:white;
     }
 
     .carousel-slide{
       display:none;
+      justify-content:center;
+      align-items:center;
+      background:white;
     }
 
     .carousel-slide.active{
-      display:block;
+      display:flex;
     }
 
     .carousel-slide img{
       width:100%;
-      height:430px;
-      object-fit:cover;
+      height:auto;
+      max-height:700px;
+      object-fit:contain;
       display:block;
+      background:white;
     }
 
     .carousel-btn{
       position:absolute;
       top:50%;
       transform:translateY(-50%);
-      background:rgba(255,255,255,0.8);
+      background:rgba(255,255,255,0.85);
       border:none;
       color:#12384a;
       font-size:28px;
@@ -128,6 +139,7 @@
       border-radius:50%;
       cursor:pointer;
       font-weight:bold;
+      z-index:10;
     }
 
     .carousel-btn:hover{
@@ -195,16 +207,20 @@
       text-align:left;
     }
 
-    .mapa-lado{ width:50%; }
+    .mapa-lado{
+      width:50%;
+    }
 
     .mapa-img{
       width:100%;
       max-width:520px;
-      border-radius:0;
+      border-radius:15px;
       box-shadow:0 4px 15px rgba(0,0,0,0.12);
     }
 
-    .texto-lado{ width:40%; }
+    .texto-lado{
+      width:40%;
+    }
 
     .texto-lado h2{
       color:#2f6f5e;
@@ -274,7 +290,10 @@
       z-index:1000;
     }
 
+    /* CELULAR */
+
     @media (max-width:768px){
+
       header{
         flex-direction:column;
         gap:12px;
@@ -298,7 +317,6 @@
       }
 
       .dropdown-menu{
-        position:absolute;
         top:24px;
         min-width:165px;
         padding:8px;
@@ -324,12 +342,13 @@
       }
 
       .carousel{
-        max-width:340px;
+        max-width:95%;
         margin:20px auto;
       }
 
       .carousel-slide img{
-        height:230px;
+        height:auto;
+        max-height:400px;
       }
 
       .carousel-btn{
@@ -372,32 +391,23 @@
 
       .texto-lado h2{
         font-size:28px;
-        margin-bottom:15px;
       }
 
       .texto-lado h3{
         font-size:20px;
-        margin-bottom:15px;
       }
 
       .texto-lado p{
         font-size:15px;
-        line-height:1.5;
       }
 
       footer{
         padding:25px 15px;
-        margin-top:20px;
       }
 
       .footer-contenido{
         flex-direction:column;
         text-align:center;
-        gap:12px;
-      }
-
-      .footer-contenido h3{
-        font-size:20px;
       }
 
       .footer-contenido p{
@@ -427,6 +437,7 @@
 
     <div class="dropdown">
       <a href="#especialidades">Especialidades ▾</a>
+
       <div class="dropdown-menu">
         <a href="#estetica-orofacial">Estética Orofacial</a>
         <a href="#odontologia-integral">Odontología Integral</a>
@@ -435,6 +446,7 @@
 
     <div class="dropdown">
       <a href="#promociones">Promociones ▾</a>
+
       <div class="dropdown-menu">
         <a href="#promociones">Ver promociones</a>
         <a href="#contacto">Consultar promoción</a>
@@ -451,17 +463,20 @@
 
 <section class="hero" id="inicio">
 
+  <!-- CARRUSEL -->
+
   <div class="carousel">
+
     <div class="carousel-slide active">
-      <img src="nariz.jpg" alt="Tratamiento estético 1">
+      <img src="nariz.jpg">
     </div>
 
     <div class="carousel-slide">
-      <img src="nariz1.jpg" alt="Tratamiento estético 2">
+      <img src="nariz1.jpg">
     </div>
 
     <div class="carousel-slide">
-      <img src="nariz2.jpg" alt="Tratamiento estético 3">
+      <img src="nariz2.jpg">
     </div>
 
     <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
@@ -472,41 +487,73 @@
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
     </div>
+
   </div>
 
   <h1>Clínica Dental Rejuvenece</h1>
+
   <p>Belleza, salud y confianza en tu sonrisa.</p>
 
-  <a class="boton" href="https://instagram.com/rejuvenece__" target="_blank">Instagram</a>
-  <a class="boton" href="https://wa.me/56971453222" target="_blank">WhatsApp</a>
+  <a class="boton" href="https://instagram.com/rejuvenece__" target="_blank">
+    Instagram
+  </a>
+
+  <a class="boton" href="https://wa.me/56971453222" target="_blank">
+    WhatsApp
+  </a>
+
 </section>
 
 <section class="ubicacion" id="contacto">
+
   <div class="mapa-lado">
     <a href="https://www.google.com/maps/search/?api=1&query=Av.%20Los%20Pajaritos%203195%20Of%201320%20Santiago%20Chile" target="_blank">
+
       <img src="mapa.png" class="mapa-img">
+
     </a>
   </div>
 
   <div class="texto-lado">
+
     <h2>Encuéntranos</h2>
+
     <h3>Clínica Dental Rejuvenece</h3>
-    <p>Av. Los Pajaritos #3195, Of 1320, Piso 13, Santiago, Chile.</p>
 
-    <a class="link-mapa" href="https://www.google.com/maps/search/?api=1&query=Av.%20Los%20Pajaritos%203195%20Of%201320%20Santiago%20Chile" target="_blank">
+    <p>
+      Av. Los Pajaritos #3195, Of 1320,
+      Piso 13, Santiago, Chile.
+    </p>
+
+    <a class="link-mapa"
+    href="https://www.google.com/maps/search/?api=1&query=Av.%20Los%20Pajaritos%203195%20Of%201320%20Santiago%20Chile"
+    target="_blank">
+
       Cómo llegar →
+
     </a>
 
-    <p>Agenda tu hora por WhatsApp o contáctanos por Instagram.</p>
+    <p>
+      Agenda tu hora por WhatsApp
+      o contáctanos por Instagram.
+    </p>
 
-    <a class="boton" href="https://wa.me/56971453222" target="_blank">
+    <a class="boton"
+    href="https://wa.me/56971453222"
+    target="_blank">
+
       Reserva tu hora
+
     </a>
+
   </div>
+
 </section>
 
 <footer>
+
   <div class="footer-contenido">
+
     <div>
       <h3>Clínica Dental Rejuvenece</h3>
       <p>Odontología Integral y Armonización Orofacial</p>
@@ -515,46 +562,58 @@
     <div>
       <p>📍 Av. Los Pajaritos #3195, Of 1320, Piso 13, Santiago, Chile</p>
       <p>📞 +56 9 7145 3222</p>
-      <p>📸 <a href="https://instagram.com/rejuvenece__" target="_blank">@Rejuvenece__</a></p>
+
+      <p>
+        📸
+        <a href="https://instagram.com/rejuvenece__" target="_blank">
+          @Rejuvenece__
+        </a>
+      </p>
     </div>
+
   </div>
+
 </footer>
 
 <script>
-  let slideIndex = 0;
-  const slides = document.querySelectorAll(".carousel-slide");
-  const dots = document.querySelectorAll(".dot");
 
-  function showSlide(index){
-    if(index >= slides.length){
-      slideIndex = 0;
-    }
+let slideIndex = 0;
 
-    if(index < 0){
-      slideIndex = slides.length - 1;
-    }
+const slides = document.querySelectorAll(".carousel-slide");
+const dots = document.querySelectorAll(".dot");
 
-    slides.forEach(slide => slide.classList.remove("active"));
-    dots.forEach(dot => dot.classList.remove("active"));
+function showSlide(index){
 
-    slides[slideIndex].classList.add("active");
-    dots[slideIndex].classList.add("active");
+  if(index >= slides.length){
+    slideIndex = 0;
   }
 
-  function moveSlide(step){
-    slideIndex += step;
-    showSlide(slideIndex);
+  if(index < 0){
+    slideIndex = slides.length - 1;
   }
 
-  function currentSlide(index){
-    slideIndex = index;
-    showSlide(slideIndex);
-  }
+  slides.forEach(slide => slide.classList.remove("active"));
+  dots.forEach(dot => dot.classList.remove("active"));
 
-  setInterval(function(){
-    slideIndex++;
-    showSlide(slideIndex);
-  }, 4000);
+  slides[slideIndex].classList.add("active");
+  dots[slideIndex].classList.add("active");
+}
+
+function moveSlide(step){
+  slideIndex += step;
+  showSlide(slideIndex);
+}
+
+function currentSlide(index){
+  slideIndex = index;
+  showSlide(slideIndex);
+}
+
+setInterval(function(){
+  slideIndex++;
+  showSlide(slideIndex);
+}, 4000);
+
 </script>
 
 </body>
