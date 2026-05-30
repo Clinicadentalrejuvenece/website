@@ -212,6 +212,7 @@
       display:flex;
       justify-content:center;
       gap:10px;
+      z-index:20;
     }
 
     .dot{
@@ -227,7 +228,7 @@
     }
 
     .categorias{
-      background:#eaf8fb;
+      background:#f4f8fb;
       padding:35px 20px 55px;
     }
 
@@ -397,11 +398,11 @@
     @media(max-width:768px){
       header{
         height:74px;
-        padding:0 15px;
+        padding:0 18px;
       }
 
       .logo{
-        width:92px;
+        width:95px;
         max-height:54px;
       }
 
@@ -426,58 +427,113 @@
         display:flex;
       }
 
+      .banner{
+        padding:10px;
+      }
+
       .banner span{
         font-size:13px;
         max-width:85%;
         padding:8px 12px;
+        line-height:1.4;
+      }
+
+      .hero{
+        padding:32px 16px 28px;
       }
 
       .titulo-clinica{
         font-size:34px;
-        line-height:1.1;
+        line-height:1.08;
         letter-spacing:-1px;
+        margin-bottom:12px;
       }
 
       .subtexto{
         font-size:16px;
+        margin-bottom:28px;
       }
 
       .carousel{
-        height:520px;
+        height:auto;
         border-radius:28px;
+      }
+
+      .carousel-slide.active{
+        display:block;
       }
 
       .slide-contenido{
         flex-direction:column;
+        height:auto;
       }
 
       .slide-texto{
         width:100%;
-        height:48%;
-        padding:30px;
+        min-height:345px;
+        padding:34px 26px 42px;
         text-align:center;
         align-items:center;
+        justify-content:center;
       }
 
       .slide-texto h2{
-        font-size:35px;
+        font-size:36px;
+        line-height:1.05;
+        letter-spacing:-1px;
+        margin-bottom:20px;
       }
 
       .slide-texto p{
         font-size:18px;
+        line-height:1.4;
+        margin-bottom:8px;
       }
 
       .precio-slide{
         font-size:34px;
+        margin:14px 0 24px;
+      }
+
+      .slide-boton{
+        padding:13px 28px;
+        font-size:15px;
       }
 
       .slide-imagen{
         width:100%;
-        height:52%;
+        height:360px;
+      }
+
+      .slide-imagen img{
+        object-fit:cover;
+        object-position:center;
+      }
+
+      .carousel-btn{
+        width:42px;
+        height:42px;
+        font-size:26px;
+        top:63%;
+      }
+
+      .prev{left:12px;}
+      .next{right:12px;}
+
+      .dots{
+        bottom:18px;
       }
 
       .categoria-card{
         width:92%;
+      }
+
+      .categoria-card img{
+        height:220px;
+      }
+
+      .categoria-card h2{
+        font-size:24px;
       }
 
       .ubicacion{
@@ -500,6 +556,28 @@
         padding:18px;
         box-shadow:none;
       }
+
+      .texto-lado h2{
+        font-size:32px;
+      }
+
+      .texto-lado h3{
+        font-size:20px;
+      }
+
+      .texto-lado p{
+        font-size:14px;
+      }
+
+      .footer-contenido{
+        text-align:center;
+      }
+
+      .whatsapp{
+        width:54px;
+        height:54px;
+        font-size:25px;
+      }
     }
   </style>
 </head>
@@ -514,7 +592,7 @@
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
   <nav id="menu">
-    <a href="index.html">Home</a>
+    <a href="#inicio">Home</a>
     <a href="promociones.html">Promociones</a>
     <a href="#contacto">Contacto</a>
     <a class="agenda-header" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agendar ahora</a>
@@ -540,6 +618,7 @@
             <div class="precio-slide">$90.000</div>
             <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">Obtener beneficio</a>
           </div>
+
           <div class="slide-imagen">
             <img src="mama.jpg" alt="Promoción Mes de la Mamá">
           </div>
@@ -553,6 +632,7 @@
             <p>Realza tu belleza natural con tratamientos personalizados.</p>
             <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">Reservar hora</a>
           </div>
+
           <div class="slide-imagen">
             <img src="nariz.jpg" alt="Tratamiento de armonización orofacial">
           </div>
@@ -566,6 +646,7 @@
             <p>Tratamientos enfocados en armonía, cuidado y bienestar.</p>
             <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">Agendar evaluación</a>
           </div>
+
           <div class="slide-imagen">
             <img src="nariz1.jpg" alt="Resultado de tratamiento estético">
           </div>
@@ -589,7 +670,7 @@
   <div class="categorias-contenedor">
 
     <a class="categoria-card" href="odontologia.html">
-      <img src="odonto.jpg" alt="Odontología Integral">
+      <img src="odontologia.jpg" alt="Odontología Integral">
       <h2>Odontología Integral</h2>
     </a>
 
