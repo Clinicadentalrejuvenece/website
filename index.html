@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clínica Dental Rejuvenece</title>
 
   <style>
-    body{margin:0;font-family:Arial,sans-serif;background:#f4f8fb;color:#222;text-align:center;}
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#f4f8fb;
+      color:#222;
+      text-align:center;
+    }
 
     header{
       background:white;
-      padding:6px 24px;
+      padding:8px 28px;
       display:flex;
       justify-content:space-between;
       align-items:center;
@@ -17,29 +24,33 @@
       box-shadow:0 2px 10px #ddd;
       position:relative;
       z-index:3000;
-      min-height:95px;
+      min-height:88px;
     }
 
     .logo{
-      width:230px;
-      max-height:90px;
+      width:220px;
+      max-height:85px;
       object-fit:contain;
       margin-left:10px;
     }
 
-    nav{display:flex;gap:28px;align-items:center;}
+    nav{
+      display:flex;
+      gap:26px;
+      align-items:center;
+    }
 
     nav a{
       text-decoration:none;
       color:#12384a;
       font-weight:bold;
-      font-size:18px;
+      font-size:17px;
     }
 
     .agenda-header{
       background:#8ed8f8;
       color:#12384a;
-      padding:12px 22px;
+      padding:12px 24px;
       border-radius:30px;
       font-weight:bold;
     }
@@ -67,17 +78,34 @@
 
     .banner span{
       background:white;
-      padding:10px 25px;
+      padding:10px 28px;
       border-radius:30px;
       box-shadow:0 2px 10px rgba(0,0,0,0.08);
     }
 
-    .hero{padding:55px 20px 70px;}
+    .hero{
+      padding:45px 20px 60px;
+    }
 
-    h1{font-size:46px;color:#12384a;margin-bottom:10px;}
-    .subtexto{font-size:20px;color:#555;margin-bottom:18px;}
-    .botones-home{margin-bottom:45px;}
-    p{font-size:18px;color:#555;}
+    .titulo-clinica{
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:48px;
+      color:#12384a;
+      margin-bottom:10px;
+      letter-spacing:1px;
+      font-weight:bold;
+    }
+
+    .subtexto{
+      font-size:20px;
+      color:#555;
+      margin-bottom:40px;
+    }
+
+    p{
+      font-size:18px;
+      color:#555;
+    }
 
     .boton{
       display:inline-block;
@@ -99,19 +127,96 @@
       margin:0 auto;
     }
 
-    .carousel,.foto-principal{
+    .carousel,
+    .foto-principal{
       width:50%;
       height:520px;
       overflow:hidden;
-      background:transparent;
-      box-shadow:none;
-      border-radius:0;
     }
 
-    .carousel{position:relative;}
-    .carousel-slide{display:none;width:100%;height:100%;justify-content:center;align-items:center;}
-    .carousel-slide.active{display:flex;}
-    .carousel-slide img{width:100%;height:100%;object-fit:contain;display:block;}
+    .carousel{
+      position:relative;
+      background:#2d8b92;
+      border-radius:35px;
+      box-shadow:0 8px 25px rgba(0,0,0,0.13);
+    }
+
+    .carousel-slide{
+      display:none;
+      width:100%;
+      height:100%;
+    }
+
+    .carousel-slide.active{
+      display:block;
+    }
+
+    .slide-contenido{
+      display:flex;
+      height:100%;
+      width:100%;
+    }
+
+    .slide-texto{
+      width:50%;
+      color:white;
+      padding:50px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      text-align:left;
+      box-sizing:border-box;
+    }
+
+    .slide-texto h2{
+      font-size:40px;
+      margin:0 0 18px;
+      color:white;
+      font-family:Georgia, 'Times New Roman', serif;
+      line-height:1.1;
+    }
+
+    .slide-texto p{
+      color:white;
+      font-size:21px;
+      line-height:1.5;
+      margin:0 0 15px;
+    }
+
+    .precio-slide{
+      font-size:36px;
+      font-weight:bold;
+      margin:12px 0 25px;
+      color:white;
+    }
+
+    .slide-boton{
+      display:inline-block;
+      background:white;
+      color:#2d8b92;
+      text-decoration:none;
+      padding:14px 28px;
+      border-radius:35px;
+      font-weight:bold;
+      width:max-content;
+    }
+
+    .slide-imagen{
+      width:50%;
+      height:100%;
+    }
+
+    .slide-imagen img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .foto-principal{
+      border-radius:35px;
+      box-shadow:0 8px 25px rgba(0,0,0,0.13);
+    }
 
     .foto-principal img{
       width:100%;
@@ -125,7 +230,7 @@
       position:absolute;
       top:50%;
       transform:translateY(-50%);
-      background:rgba(255,255,255,0.85);
+      background:rgba(255,255,255,0.9);
       border:none;
       color:#12384a;
       font-size:28px;
@@ -142,7 +247,7 @@
 
     .dots{
       position:absolute;
-      bottom:15px;
+      bottom:18px;
       width:100%;
       display:flex;
       justify-content:center;
@@ -150,26 +255,42 @@
     }
 
     .dot{
-      width:11px;
-      height:11px;
+      width:12px;
+      height:12px;
       border-radius:50%;
       background:rgba(255,255,255,0.7);
       cursor:pointer;
     }
 
-    .dot.active{background:#8ed8f8;}
+    .dot.active{
+      background:#8ed8f8;
+    }
+
+    .redes-sociales{
+      padding:25px 20px 10px;
+      background:white;
+    }
+
+    .redes-sociales h2{
+      color:#12384a;
+      font-size:28px;
+      margin-bottom:10px;
+      font-family:Georgia, 'Times New Roman', serif;
+    }
 
     .ubicacion{
       display:flex;
       align-items:center;
       justify-content:center;
       gap:45px;
-      padding:50px 55px;
+      padding:45px 55px 50px;
       background:white;
       text-align:left;
     }
 
-    .mapa-lado{width:42%;}
+    .mapa-lado{
+      width:42%;
+    }
 
     .mapa-img{
       width:100%;
@@ -190,6 +311,7 @@
       color:#2f6f5e;
       font-size:38px;
       margin:0 0 10px;
+      font-family:Georgia, 'Times New Roman', serif;
     }
 
     .texto-lado h3{
@@ -216,7 +338,7 @@
       background:#12384a;
       color:white;
       padding:28px 22px;
-      margin-top:25px;
+      margin-top:0;
     }
 
     .footer-contenido{
@@ -228,9 +350,19 @@
       text-align:left;
     }
 
-    .footer-contenido h3{margin:0 0 8px;}
-    .footer-contenido p{color:white;margin:6px 0;}
-    .footer-contenido a{color:#9ee7ff;text-decoration:none;}
+    .footer-contenido h3{
+      margin:0 0 8px;
+    }
+
+    .footer-contenido p{
+      color:white;
+      margin:6px 0;
+    }
+
+    .footer-contenido a{
+      color:#9ee7ff;
+      text-decoration:none;
+    }
 
     .contacto-linea{
       margin:6px 0;
@@ -262,12 +394,14 @@
       }
 
       .logo{
-        width:210px;
+        width:205px;
         max-height:82px;
         margin:0;
       }
 
-      .menu-toggle{display:block;}
+      .menu-toggle{
+        display:block;
+      }
 
       nav{
         display:none;
@@ -282,7 +416,9 @@
         padding:15px 0;
       }
 
-      nav.active{display:flex;}
+      nav.active{
+        display:flex;
+      }
 
       nav a{
         font-size:18px;
@@ -300,22 +436,71 @@
         max-width:88%;
       }
 
-      .hero{padding:30px 15px 45px;}
-      h1{font-size:28px;line-height:1.2;}
-      .subtexto{font-size:15px;}
+      .hero{
+        padding:30px 15px 45px;
+      }
+
+      .titulo-clinica{
+        font-size:31px;
+        line-height:1.2;
+      }
+
+      .subtexto{
+        font-size:15px;
+        margin-bottom:28px;
+      }
 
       .hero-grid{
         flex-direction:column;
         gap:22px;
       }
 
-      .carousel,.foto-principal{
+      .carousel,
+      .foto-principal{
         width:100%;
-        height:360px;
+        height:420px;
       }
 
-      .carousel-btn{width:34px;height:34px;font-size:22px;}
-      .boton{padding:10px 18px;font-size:14px;}
+      .slide-contenido{
+        flex-direction:column;
+      }
+
+      .slide-texto{
+        width:100%;
+        height:48%;
+        padding:28px;
+        text-align:center;
+        align-items:center;
+      }
+
+      .slide-texto h2{
+        font-size:30px;
+      }
+
+      .slide-texto p{
+        font-size:17px;
+      }
+
+      .precio-slide{
+        font-size:28px;
+        margin:8px 0 15px;
+      }
+
+      .slide-imagen{
+        width:100%;
+        height:52%;
+      }
+
+      .carousel-btn{
+        width:34px;
+        height:34px;
+        font-size:22px;
+      }
+
+      .boton{
+        padding:10px 18px;
+        font-size:14px;
+      }
 
       .ubicacion{
         flex-direction:column;
@@ -324,7 +509,10 @@
         text-align:center;
       }
 
-      .mapa-lado,.texto-lado{width:100%;}
+      .mapa-lado,
+      .texto-lado{
+        width:100%;
+      }
 
       .mapa-img{
         width:90%;
@@ -338,13 +526,24 @@
         border-radius:0;
       }
 
-      .texto-lado h2{font-size:30px;margin-bottom:10px;}
-      .texto-lado h3{font-size:21px;margin-bottom:12px;}
-      .texto-lado p{font-size:15px;line-height:1.5;margin:12px 0;}
+      .texto-lado h2{
+        font-size:30px;
+        margin-bottom:10px;
+      }
+
+      .texto-lado h3{
+        font-size:21px;
+        margin-bottom:12px;
+      }
+
+      .texto-lado p{
+        font-size:15px;
+        line-height:1.5;
+        margin:12px 0;
+      }
 
       footer{
         padding:22px 15px;
-        margin-top:15px;
       }
 
       .footer-contenido{
@@ -353,8 +552,15 @@
         gap:8px;
       }
 
-      .footer-contenido h3{font-size:20px;margin-bottom:6px;}
-      .footer-contenido p{font-size:14px;margin:4px 0;}
+      .footer-contenido h3{
+        font-size:20px;
+        margin-bottom:6px;
+      }
+
+      .footer-contenido p{
+        font-size:14px;
+        margin:4px 0;
+      }
 
       .contacto-linea{
         font-size:14px;
@@ -382,42 +588,84 @@
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
   <nav id="menu">
-    <a href="#inicio">Inicio</a>
+    <a href="#inicio">Home</a>
     <a href="servicios.html">Servicios</a>
     <a href="promociones.html">Promociones</a>
     <a href="#contacto">Contacto</a>
-    <a class="agenda-header" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?utm_content=link_in_bio&utm_medium=social&utm_source=ig&modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a>
+    <a class="agenda-header" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?utm_content=link_in_bio&utm_medium=social&utm_source=ig&modalidad=1&id_profesional=2" target="_blank">Agendar ahora</a>
   </nav>
 </header>
 
 <div class="banner">
-  <span>Odontología Integral y Armonización Orofacial</span>
+  <span>Odontología Integral • Armonización Orofacial • Estética Dental</span>
 </div>
 
 <section class="hero" id="inicio">
 
-  <h1>Clínica Dental Rejuvenece</h1>
+  <h1 class="titulo-clinica">Clínica Dental Rejuvenece</h1>
 
   <p class="subtexto">Belleza, salud y confianza en tu sonrisa.</p>
-
-  <div class="botones-home">
-    <a class="boton" href="https://instagram.com/rejuvenece__" target="_blank">Instagram</a>
-    <a class="boton" href="https://wa.me/56971453222" target="_blank">WhatsApp</a>
-  </div>
 
   <div class="hero-grid">
 
     <div class="carousel">
+
       <div class="carousel-slide active">
-        <img src="nariz.jpg" alt="Tratamiento de armonización orofacial">
+        <div class="slide-contenido">
+
+          <div class="slide-texto">
+            <h2>Mes de la Mamá</h2>
+            <p>Blanqueamiento + Limpieza Dental</p>
+            <div class="precio-slide">$90.000</div>
+
+            <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">
+              Obtener beneficio
+            </a>
+          </div>
+
+          <div class="slide-imagen">
+            <img src="mama.jpg" alt="Promoción Mes de la Mamá">
+          </div>
+
+        </div>
       </div>
 
       <div class="carousel-slide">
-        <img src="nariz1.jpg" alt="Resultado de tratamiento estético">
+        <div class="slide-contenido">
+
+          <div class="slide-texto">
+            <h2>Armonización Orofacial</h2>
+            <p>Realza tu belleza natural con tratamientos personalizados.</p>
+
+            <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">
+              Reservar hora
+            </a>
+          </div>
+
+          <div class="slide-imagen">
+            <img src="nariz.jpg" alt="Tratamiento de armonización orofacial">
+          </div>
+
+        </div>
       </div>
 
       <div class="carousel-slide">
-        <img src="nariz2.jpg" alt="Tratamiento estético facial">
+        <div class="slide-contenido">
+
+          <div class="slide-texto">
+            <h2>Estética Facial</h2>
+            <p>Tratamientos enfocados en armonía, cuidado y bienestar.</p>
+
+            <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">
+              Agendar evaluación
+            </a>
+          </div>
+
+          <div class="slide-imagen">
+            <img src="nariz1.jpg" alt="Resultado de tratamiento estético">
+          </div>
+
+        </div>
       </div>
 
       <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
@@ -428,6 +676,7 @@
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
       </div>
+
     </div>
 
     <div class="foto-principal">
@@ -436,6 +685,18 @@
 
   </div>
 
+</section>
+
+<section class="redes-sociales">
+  <h2>Contáctanos</h2>
+
+  <a class="boton" href="https://instagram.com/rejuvenece__" target="_blank">
+    Instagram
+  </a>
+
+  <a class="boton" href="https://wa.me/56971453222" target="_blank">
+    WhatsApp
+  </a>
 </section>
 
 <section class="ubicacion" id="contacto">
