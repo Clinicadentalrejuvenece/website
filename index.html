@@ -27,7 +27,6 @@
       position:sticky;
       top:0;
       z-index:999;
-      overflow:hidden;
     }
 
     .logo{
@@ -61,7 +60,7 @@
       display:none;
       background:none;
       border:none;
-      font-size:32px;
+      font-size:34px;
       color:#12384a;
       cursor:pointer;
     }
@@ -145,7 +144,7 @@
     }
 
     .slide-texto h2{
-      font-size:58px;
+      font-size:54px;
       line-height:1;
       margin-bottom:20px;
       font-weight:800;
@@ -153,14 +152,14 @@
     }
 
     .slide-texto p{
-      font-size:25px;
+      font-size:24px;
       line-height:1.4;
       color:white;
       margin-bottom:10px;
     }
 
     .precio-slide{
-      font-size:46px;
+      font-size:44px;
       font-weight:800;
       margin:18px 0 28px;
     }
@@ -178,12 +177,14 @@
     .slide-imagen{
       width:55%;
       height:100%;
+      display:block;
     }
 
     .slide-imagen img{
       width:100%;
       height:100%;
       object-fit:cover;
+      display:block;
     }
 
     .carousel-btn{
@@ -229,22 +230,22 @@
 
     .categorias{
       background:#f4f8fb;
-      padding:35px 20px 55px;
+      padding:45px 20px 60px;
     }
 
     .categorias-contenedor{
-      max-width:950px;
+      max-width:1100px;
       margin:auto;
       display:flex;
       justify-content:center;
-      gap:30px;
+      gap:36px;
       flex-wrap:wrap;
     }
 
     .categoria-card{
-      width:320px;
+      width:390px;
       background:white;
-      border-radius:26px;
+      border-radius:28px;
       overflow:hidden;
       text-decoration:none;
       color:#12384a;
@@ -259,14 +260,14 @@
 
     .categoria-card img{
       width:100%;
-      height:230px;
+      height:270px;
       object-fit:cover;
       display:block;
     }
 
     .categoria-card h2{
-      font-size:28px;
-      padding:28px 20px;
+      font-size:32px;
+      padding:30px 20px;
       margin:0;
       font-weight:800;
     }
@@ -412,7 +413,7 @@
 
       nav{
         display:none;
-        position:absolute;
+        position:fixed;
         top:74px;
         left:0;
         width:100%;
@@ -421,21 +422,17 @@
         padding:18px 0;
         gap:15px;
         box-shadow:0 8px 18px rgba(0,0,0,0.12);
+        z-index:1000;
       }
 
       nav.active{
         display:flex;
       }
 
-      .banner{
-        padding:10px;
-      }
-
       .banner span{
         font-size:13px;
         max-width:85%;
         padding:8px 12px;
-        line-height:1.4;
       }
 
       .hero{
@@ -459,10 +456,6 @@
         border-radius:28px;
       }
 
-      .carousel-slide.active{
-        display:block;
-      }
-
       .slide-contenido{
         flex-direction:column;
         height:auto;
@@ -470,34 +463,23 @@
 
       .slide-texto{
         width:100%;
-        min-height:345px;
-        padding:34px 26px 42px;
+        min-height:320px;
+        padding:32px 26px 38px;
         text-align:center;
         align-items:center;
-        justify-content:center;
       }
 
       .slide-texto h2{
-        font-size:36px;
+        font-size:34px;
         line-height:1.05;
-        letter-spacing:-1px;
-        margin-bottom:20px;
       }
 
       .slide-texto p{
         font-size:18px;
-        line-height:1.4;
-        margin-bottom:8px;
       }
 
       .precio-slide{
         font-size:34px;
-        margin:14px 0 24px;
-      }
-
-      .slide-boton{
-        padding:13px 28px;
-        font-size:15px;
       }
 
       .slide-imagen{
@@ -505,23 +487,11 @@
         height:360px;
       }
 
-      .slide-imagen img{
-        object-fit:cover;
-        object-position:center;
-      }
-
       .carousel-btn{
         width:42px;
         height:42px;
         font-size:26px;
-        top:63%;
-      }
-
-      .prev{left:12px;}
-      .next{right:12px;}
-
-      .dots{
-        bottom:18px;
+        top:64%;
       }
 
       .categoria-card{
@@ -529,18 +499,17 @@
       }
 
       .categoria-card img{
-        height:220px;
+        height:250px;
       }
 
       .categoria-card h2{
-        font-size:24px;
+        font-size:28px;
       }
 
       .ubicacion{
         flex-direction:column;
         text-align:center;
         padding:30px 18px;
-        gap:20px;
       }
 
       .mapa-lado,
@@ -548,35 +517,13 @@
         width:100%;
       }
 
-      .mapa-img{
-        max-width:100%;
-      }
-
       .texto-lado{
         padding:18px;
         box-shadow:none;
       }
 
-      .texto-lado h2{
-        font-size:32px;
-      }
-
-      .texto-lado h3{
-        font-size:20px;
-      }
-
-      .texto-lado p{
-        font-size:14px;
-      }
-
       .footer-contenido{
         text-align:center;
-      }
-
-      .whatsapp{
-        width:54px;
-        height:54px;
-        font-size:25px;
       }
     }
   </style>
@@ -616,12 +563,26 @@
             <h2>Mes de la Mamá</h2>
             <p>Blanqueamiento + Limpieza Dental</p>
             <div class="precio-slide">$90.000</div>
-            <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">Obtener beneficio</a>
+            <a class="slide-boton" href="promociones.html">Obtener beneficio</a>
           </div>
 
-          <div class="slide-imagen">
+          <a class="slide-imagen" href="promociones.html">
             <img src="mama.jpg" alt="Promoción Mes de la Mamá">
+          </a>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="slide-contenido">
+          <div class="slide-texto">
+            <h2>Odontología Integral</h2>
+            <p>Procedimientos odontológicos para cuidar tu salud bucal.</p>
+            <a class="slide-boton" href="odontologia.html">Ver procedimientos</a>
           </div>
+
+          <a class="slide-imagen" href="odontologia.html">
+            <img src="verde.jpg" alt="Odontología Integral">
+          </a>
         </div>
       </div>
 
@@ -630,12 +591,12 @@
           <div class="slide-texto">
             <h2>Armonización Orofacial</h2>
             <p>Realza tu belleza natural con tratamientos personalizados.</p>
-            <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">Reservar hora</a>
+            <a class="slide-boton" href="estetica.html">Ver tratamientos</a>
           </div>
 
-          <div class="slide-imagen">
-            <img src="nariz.jpg" alt="Tratamiento de armonización orofacial">
-          </div>
+          <a class="slide-imagen" href="estetica.html">
+            <img src="ñeta.jpg" alt="Armonización Orofacial">
+          </a>
         </div>
       </div>
 
@@ -644,12 +605,12 @@
           <div class="slide-texto">
             <h2>Estética Facial</h2>
             <p>Tratamientos enfocados en armonía, cuidado y bienestar.</p>
-            <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">Agendar evaluación</a>
+            <a class="slide-boton" href="estetica.html">Agendar evaluación</a>
           </div>
 
-          <div class="slide-imagen">
-            <img src="nariz1.jpg" alt="Resultado de tratamiento estético">
-          </div>
+          <a class="slide-imagen" href="estetica.html">
+            <img src="sinbordes.jpg" alt="Estética Facial">
+          </a>
         </div>
       </div>
 
@@ -660,6 +621,7 @@
         <span class="dot active" onclick="currentSlide(0)"></span>
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
       </div>
 
     </div>
@@ -670,7 +632,7 @@
   <div class="categorias-contenedor">
 
     <a class="categoria-card" href="odontologia.html">
-      <img src="odonto.jpg" alt="Odontología Integral">
+      <img src="odontologia.jpg" alt="Odontología Integral">
       <h2>Odontología Integral</h2>
     </a>
 
@@ -699,16 +661,9 @@
     <h2>Encuéntranos</h2>
     <h3>Clínica Dental Rejuvenece</h3>
     <p>Estamos ubicados en Av. Los Pajaritos #3195, Oficina 1320, Piso 13, Santiago, Chile.</p>
-
-    <a class="link-mapa" href="https://www.google.com/maps/search/?api=1&query=Av.%20Los%20Pajaritos%203195%20Oficina%201320%20Santiago%20Chile" target="_blank">
-      Cómo llegar →
-    </a>
-
+    <a class="link-mapa" href="https://www.google.com/maps/search/?api=1&query=Av.%20Los%20Pajaritos%203195%20Oficina%201320%20Santiago%20Chile" target="_blank">Cómo llegar →</a>
     <p>Agenda tu hora por WhatsApp o contáctanos a través de Instagram.</p>
-
-    <a class="boton" href="https://wa.me/56971453222" target="_blank">
-      Reservar hora
-    </a>
+    <a class="boton" href="https://wa.me/56971453222" target="_blank">Reservar hora</a>
   </div>
 </section>
 
@@ -758,7 +713,7 @@ function currentSlide(index){
 setInterval(function(){
   slideIndex++;
   showSlide(slideIndex);
-}, 4000);
+}, 4500);
 
 function toggleMenu(){
   document.getElementById("menu").classList.toggle("active");
