@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odontología Integral | Clínica Dental Rejuvenece</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      margin:0;
+      font-family:'Poppins', sans-serif;
+      background:linear-gradient(180deg, #eaf8fb 0%, #f4f8fb 45%, #ffffff 100%);
+      color:#12384a;
+      text-align:center;
+    }
+
+    header{
+      background:white;
+      height:82px;
+      padding:0 28px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+
+    .logo{
+      width:135px;
+      max-height:62px;
+      object-fit:contain;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#12384a;
+      font-weight:700;
+      margin-left:25px;
+    }
+
+    .hero{
+      padding:70px 20px 30px;
+      background:#dff3fb;
+    }
+
+    h1{
+      font-size:46px;
+      margin-bottom:10px;
+      font-weight:800;
+      letter-spacing:-1px;
+    }
+
+    .subtitulo{
+      color:#555;
+      font-size:18px;
+      margin:0;
+    }
+
+    .catalogo{
+      max-width:1000px;
+      margin:45px auto 75px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:18px;
+      padding:0 20px;
+    }
+
+    .item{
+      background:white;
+      padding:22px;
+      border-radius:20px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      font-weight:700;
+      transition:0.3s;
+    }
+
+    .item:hover{
+      transform:translateY(-5px);
+      background:#eaf8fb;
+    }
+
+    footer{
+      background:#12384a;
+      color:white;
+      padding:30px;
+    }
+
+    footer p{
+      color:white;
+      margin:6px;
+    }
+
+    @media(max-width:768px){
+      header{
+        height:74px;
+        padding:0 15px;
+      }
+
+      .logo{
+        width:92px;
+        max-height:54px;
+      }
+
+      nav a{
+        margin-left:12px;
+        font-size:13px;
+      }
+
+      h1{
+        font-size:34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img class="logo" src="nuevologo.JPG" alt="Logo Clínica Dental Rejuvenece">
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="promociones.html">Promociones</a>
+    <a href="index.html#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Catálogo de Odontología Integral</h1>
+  <p class="subtitulo">Servicios disponibles en Clínica Dental Rejuvenece.</p>
+</section>
+
+<section class="catalogo">
+  <div class="item">Contención Removible Superior</div>
+  <div class="item">Control Final Post Retiro</div>
+  <div class="item">Control Mensual de Ortodoncia</div>
+  <div class="item">Estudio: Impresión Superior e Inferior</div>
+  <div class="item">Evaluación de Ortodoncia</div>
+  <div class="item">Instalación de Aparatos Fijos</div>
+  <div class="item">Instalación de Aparatos Fijos Oferta</div>
+  <div class="item">Presupuesto Anual de Controles</div>
+  <div class="item">Presupuesto Semestral de Controles</div>
+  <div class="item">Retiro de Aparatos Fijos y Contención Fija Inferior</div>
+</section>
+
+<footer>
+  <p>Clínica Dental Rejuvenece</p>
+  <p>Av. Los Pajaritos #3195, Oficina 1320, Piso 13, Santiago, Chile</p>
+  <p>+56 9 7145 3222</p>
+</footer>
+
+</body>
+</html>
