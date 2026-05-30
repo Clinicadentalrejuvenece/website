@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Clínica Dental Rejuvenece</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+
     body{
       margin:0;
-      font-family:'Poppins', Arial, sans-serif;
+      font-family:'Poppins', sans-serif;
       background:#f4f8fb;
       color:#222;
       text-align:center;
@@ -18,42 +20,45 @@
 
     header{
       background:white;
-      padding:8px 28px;
+      padding:10px 35px;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      gap:35px;
-      box-shadow:0 2px 10px #ddd;
-      position:relative;
-      z-index:3000;
-      min-height:88px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:999;
     }
 
     .logo{
-      width:220px;
-      max-height:85px;
+      width:360px;
+      height:auto;
       object-fit:contain;
-      margin-left:10px;
+      display:block;
     }
 
     nav{
       display:flex;
-      gap:26px;
       align-items:center;
+      gap:34px;
     }
 
     nav a{
       text-decoration:none;
       color:#12384a;
       font-weight:600;
-      font-size:16px;
+      font-size:17px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      opacity:0.7;
     }
 
     .agenda-header{
       background:#8ed8f8;
-      color:#12384a;
-      padding:12px 24px;
-      border-radius:30px;
+      padding:14px 28px;
+      border-radius:35px;
       font-weight:700;
     }
 
@@ -67,72 +72,52 @@
     }
 
     .banner{
-      background:#d8eef8;
+      background:#dff3fb;
       padding:14px;
-      color:#1b6f8f;
-      font-weight:600;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      border-top:1px solid #c7dfe8;
-      border-bottom:1px solid #c7dfe8;
+      border-top:1px solid #d2e8f0;
+      border-bottom:1px solid #d2e8f0;
     }
 
     .banner span{
       background:white;
       padding:10px 28px;
-      border-radius:30px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+      border-radius:35px;
+      font-weight:600;
+      color:#1d6f88;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
     }
 
     .hero{
-      padding:45px 20px 35px;
+      padding:55px 20px 40px;
     }
 
     .titulo-clinica{
-      font-size:48px;
+      font-size:54px;
       color:#12384a;
-      margin-bottom:10px;
-      letter-spacing:-1px;
       font-weight:800;
+      letter-spacing:-2px;
+      margin-bottom:12px;
     }
 
     .subtexto{
-      font-size:20px;
+      font-size:21px;
       color:#555;
-      margin-bottom:38px;
-      font-weight:400;
-    }
-
-    p{
-      font-size:18px;
-      color:#555;
-    }
-
-    .boton{
-      display:inline-block;
-      background:#8ed8f8;
-      color:#12384a;
-      text-decoration:none;
-      padding:12px 25px;
-      border-radius:30px;
-      margin:10px;
-      font-weight:700;
+      margin-bottom:45px;
     }
 
     .hero-grid{
-      max-width:1240px;
-      margin:0 auto;
+      max-width:1280px;
+      margin:auto;
     }
 
     .carousel{
       width:100%;
-      height:500px;
+      height:540px;
+      background:#3d9298;
+      border-radius:38px;
       overflow:hidden;
       position:relative;
-      background:#2d8b92;
-      border-radius:35px;
-      box-shadow:0 8px 25px rgba(0,0,0,0.13);
+      box-shadow:0 10px 30px rgba(0,0,0,0.12);
     }
 
     .carousel-slide{
@@ -147,58 +132,59 @@
 
     .slide-contenido{
       display:flex;
-      height:100%;
       width:100%;
+      height:100%;
     }
 
     .slide-texto{
-      width:48%;
-      color:white;
-      padding:65px;
+      width:45%;
+      padding:70px;
       display:flex;
       flex-direction:column;
       justify-content:center;
       text-align:left;
+      color:white;
       box-sizing:border-box;
     }
 
     .slide-texto h2{
-      font-size:44px;
-      margin:0 0 18px;
-      color:white;
+      font-size:58px;
+      line-height:1;
+      margin-bottom:20px;
       font-weight:800;
-      line-height:1.1;
-      letter-spacing:-1px;
+      letter-spacing:-2px;
     }
 
     .slide-texto p{
+      font-size:25px;
+      line-height:1.4;
       color:white;
-      font-size:22px;
-      line-height:1.5;
-      margin:0 0 15px;
-      font-weight:400;
+      margin-bottom:10px;
     }
 
     .precio-slide{
-      font-size:38px;
+      font-size:46px;
       font-weight:800;
-      margin:12px 0 25px;
-      color:white;
+      margin:18px 0 28px;
     }
 
     .slide-boton{
-      display:inline-block;
       background:white;
       color:#2d8b92;
       text-decoration:none;
-      padding:14px 28px;
+      width:max-content;
+      padding:15px 32px;
       border-radius:35px;
       font-weight:700;
-      width:max-content;
+      transition:0.3s;
+    }
+
+    .slide-boton:hover{
+      transform:scale(1.04);
     }
 
     .slide-imagen{
-      width:52%;
+      width:55%;
       height:100%;
     }
 
@@ -206,40 +192,21 @@
       width:100%;
       height:100%;
       object-fit:cover;
-      display:block;
-    }
-
-    .foto-principal{
-      width:100%;
-      max-width:850px;
-      height:520px;
-      overflow:hidden;
-      margin:45px auto 0;
-      border-radius:35px;
-      box-shadow:0 8px 25px rgba(0,0,0,0.13);
-    }
-
-    .foto-principal img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:center 42%;
-      display:block;
     }
 
     .carousel-btn{
       position:absolute;
       top:50%;
       transform:translateY(-50%);
-      background:rgba(255,255,255,0.9);
+      width:46px;
+      height:46px;
       border:none;
+      border-radius:50%;
+      background:rgba(255,255,255,0.9);
       color:#12384a;
       font-size:28px;
-      width:42px;
-      height:42px;
-      border-radius:50%;
-      cursor:pointer;
       font-weight:700;
+      cursor:pointer;
       z-index:10;
     }
 
@@ -252,40 +219,67 @@
       width:100%;
       display:flex;
       justify-content:center;
-      gap:8px;
+      gap:10px;
     }
 
     .dot{
       width:12px;
       height:12px;
       border-radius:50%;
-      background:rgba(255,255,255,0.7);
+      background:rgba(255,255,255,0.6);
       cursor:pointer;
     }
 
     .dot.active{
-      background:#8ed8f8;
+      background:white;
+    }
+
+    .foto-principal{
+      max-width:920px;
+      width:100%;
+      height:570px;
+      margin:42px auto 0;
+      border-radius:38px;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .foto-principal img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 38%;
     }
 
     .redes-sociales{
-      padding:35px 20px 18px;
+      padding:40px 20px 20px;
       background:white;
     }
 
     .redes-sociales h2{
+      font-size:34px;
       color:#12384a;
-      font-size:30px;
-      margin-bottom:10px;
       font-weight:800;
-      letter-spacing:-0.5px;
+      margin-bottom:12px;
+    }
+
+    .boton{
+      display:inline-block;
+      background:#8ed8f8;
+      color:#12384a;
+      text-decoration:none;
+      padding:13px 28px;
+      border-radius:35px;
+      font-weight:700;
+      margin:10px;
     }
 
     .ubicacion{
       display:flex;
-      align-items:center;
       justify-content:center;
-      gap:45px;
-      padding:45px 55px 50px;
+      align-items:center;
+      gap:50px;
+      padding:50px;
       background:white;
       text-align:left;
     }
@@ -296,71 +290,65 @@
 
     .mapa-img{
       width:100%;
-      max-width:450px;
-      box-shadow:none;
-      border-radius:0;
+      max-width:470px;
     }
 
     .texto-lado{
       width:40%;
-      background:#ffffff;
-      padding:30px 34px;
-      border-radius:24px;
-      box-shadow:0 4px 18px rgba(0,0,0,0.08);
+      background:white;
+      padding:35px;
+      border-radius:28px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.08);
     }
 
     .texto-lado h2{
       color:#2f6f5e;
-      font-size:38px;
-      margin:0 0 10px;
+      font-size:50px;
       font-weight:800;
-      letter-spacing:-0.5px;
+      margin-bottom:8px;
+      letter-spacing:-1px;
     }
 
     .texto-lado h3{
-      font-size:24px;
-      margin:0 0 18px;
       color:#12384a;
-      font-weight:700;
+      font-size:28px;
+      margin-bottom:18px;
     }
 
     .texto-lado p{
+      font-size:18px;
+      line-height:1.7;
       color:#333;
-      font-size:17px;
-      line-height:1.6;
-      margin:14px 0;
-      font-weight:400;
     }
 
     .link-mapa{
       display:inline-block;
+      margin:10px 0;
       color:#2f6f5e;
       font-weight:700;
-      margin:12px 0;
+      text-decoration:none;
     }
 
     footer{
       background:#12384a;
       color:white;
-      padding:28px 22px;
-      margin-top:0;
+      padding:30px 25px;
     }
 
     .footer-contenido{
       display:flex;
       justify-content:space-around;
-      align-items:center;
-      gap:25px;
       flex-wrap:wrap;
+      gap:30px;
       text-align:left;
     }
 
     .footer-contenido h3{
-      margin:0 0 8px;
-      font-weight:700;
+      margin-bottom:10px;
     }
 
-    .footer-contenido p{
+    .footer-contenido p,
+    .contacto-linea{
       color:white;
       margin:6px 0;
     }
@@ -370,39 +358,32 @@
       text-decoration:none;
     }
 
-    .contacto-linea{
-      margin:6px 0;
-      color:white;
-    }
-
     .whatsapp{
       position:fixed;
       bottom:20px;
       left:20px;
+      width:62px;
+      height:62px;
+      border-radius:50%;
       background:#25D366;
       color:white;
-      width:60px;
-      height:60px;
-      border-radius:50%;
       display:flex;
-      align-items:center;
       justify-content:center;
-      font-size:32px;
+      align-items:center;
+      font-size:30px;
       text-decoration:none;
-      box-shadow:0 4px 10px rgba(0,0,0,0.2);
-      z-index:1000;
+      box-shadow:0 4px 12px rgba(0,0,0,0.2);
+      z-index:999;
     }
 
-    @media (max-width:768px){
+    @media(max-width:768px){
+
       header{
-        padding:6px 14px;
-        min-height:88px;
+        padding:10px 18px;
       }
 
       .logo{
-        width:205px;
-        max-height:82px;
-        margin:0;
+        width:260px;
       }
 
       .menu-toggle{
@@ -417,48 +398,28 @@
         width:100%;
         background:white;
         flex-direction:column;
-        gap:0;
-        box-shadow:0 8px 18px rgba(0,0,0,0.12);
-        padding:15px 0;
+        padding:18px 0;
+        gap:15px;
       }
 
       nav.active{
         display:flex;
       }
 
-      nav a{
-        font-size:18px;
-        padding:14px 0;
-      }
-
-      .agenda-header{
-        margin-top:8px;
-        padding:12px 24px;
-      }
-
-      .banner span{
-        font-size:14px;
-        padding:8px 14px;
-        max-width:88%;
-      }
-
       .hero{
-        padding:30px 15px 35px;
+        padding:35px 15px;
       }
 
       .titulo-clinica{
-        font-size:31px;
-        line-height:1.2;
+        font-size:34px;
       }
 
       .subtexto{
-        font-size:15px;
-        margin-bottom:28px;
+        font-size:16px;
       }
 
       .carousel{
-        width:100%;
-        height:460px;
+        height:520px;
       }
 
       .slide-contenido{
@@ -467,23 +428,21 @@
 
       .slide-texto{
         width:100%;
-        height:48%;
-        padding:28px;
+        padding:30px;
         text-align:center;
         align-items:center;
       }
 
       .slide-texto h2{
-        font-size:30px;
+        font-size:36px;
       }
 
       .slide-texto p{
-        font-size:17px;
+        font-size:18px;
       }
 
       .precio-slide{
-        font-size:28px;
-        margin:8px 0 15px;
+        font-size:34px;
       }
 
       .slide-imagen{
@@ -492,27 +451,13 @@
       }
 
       .foto-principal{
-        width:100%;
-        height:390px;
-        margin-top:30px;
-      }
-
-      .carousel-btn{
-        width:34px;
-        height:34px;
-        font-size:22px;
-      }
-
-      .boton{
-        padding:10px 18px;
-        font-size:14px;
+        height:420px;
       }
 
       .ubicacion{
         flex-direction:column;
-        padding:25px 16px 30px;
-        gap:18px;
         text-align:center;
+        padding:30px 18px;
       }
 
       .mapa-lado,
@@ -520,67 +465,25 @@
         width:100%;
       }
 
-      .mapa-img{
-        width:90%;
-        max-width:340px;
-      }
-
       .texto-lado{
-        width:auto;
-        padding:12px 8px 22px;
         box-shadow:none;
-        border-radius:0;
+        padding:15px;
       }
 
       .texto-lado h2{
-        font-size:30px;
-        margin-bottom:10px;
+        font-size:38px;
       }
 
       .texto-lado h3{
-        font-size:21px;
-        margin-bottom:12px;
-      }
-
-      .texto-lado p{
-        font-size:15px;
-        line-height:1.5;
-        margin:12px 0;
-      }
-
-      footer{
-        padding:22px 15px;
+        font-size:24px;
       }
 
       .footer-contenido{
-        flex-direction:column;
         text-align:center;
-        gap:8px;
       }
 
-      .footer-contenido h3{
-        font-size:20px;
-        margin-bottom:6px;
-      }
-
-      .footer-contenido p{
-        font-size:14px;
-        margin:4px 0;
-      }
-
-      .contacto-linea{
-        font-size:14px;
-        margin:4px 0;
-      }
-
-      .whatsapp{
-        width:48px;
-        height:48px;
-        font-size:24px;
-        bottom:14px;
-        left:14px;
-      }
     }
+
   </style>
 </head>
 
@@ -589,6 +492,7 @@
 <a class="whatsapp" href="https://wa.me/56971453222" target="_blank">💬</a>
 
 <header>
+
   <img class="logo" src="nuevologo.JPG" alt="Logo Clínica Dental Rejuvenece">
 
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -598,8 +502,14 @@
     <a href="servicios.html">Servicios</a>
     <a href="promociones.html">Promociones</a>
     <a href="#contacto">Contacto</a>
-    <a class="agenda-header" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?utm_content=link_in_bio&utm_medium=social&utm_source=ig&modalidad=1&id_profesional=2" target="_blank">Agendar ahora</a>
+
+    <a class="agenda-header"
+    href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2"
+    target="_blank">
+      Agendar ahora
+    </a>
   </nav>
+
 </header>
 
 <div class="banner">
@@ -608,25 +518,40 @@
 
 <section class="hero" id="inicio">
 
-  <h1 class="titulo-clinica">Clínica Dental Rejuvenece</h1>
+  <h1 class="titulo-clinica">
+    Clínica Dental Rejuvenece
+  </h1>
 
-  <p class="subtexto">Belleza, salud y confianza en tu sonrisa.</p>
+  <p class="subtexto">
+    Belleza, salud y confianza en tu sonrisa.
+  </p>
 
   <div class="hero-grid">
 
     <div class="carousel">
 
       <div class="carousel-slide active">
+
         <div class="slide-contenido">
 
           <div class="slide-texto">
-            <h2>Mes de la Mamá</h2>
-            <p>Blanqueamiento + Limpieza Dental</p>
-            <div class="precio-slide">$90.000</div>
 
-            <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">
+            <h2>Mes de la Mamá</h2>
+
+            <p>
+              Blanqueamiento + Limpieza Dental
+            </p>
+
+            <div class="precio-slide">
+              $90.000
+            </div>
+
+            <a class="slide-boton"
+            href="https://wa.me/56971453222"
+            target="_blank">
               Obtener beneficio
             </a>
+
           </div>
 
           <div class="slide-imagen">
@@ -634,44 +559,63 @@
           </div>
 
         </div>
+
       </div>
 
       <div class="carousel-slide">
+
         <div class="slide-contenido">
 
           <div class="slide-texto">
-            <h2>Armonización Orofacial</h2>
-            <p>Realza tu belleza natural con tratamientos personalizados.</p>
 
-            <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">
+            <h2>Armonización Orofacial</h2>
+
+            <p>
+              Realza tu belleza natural con tratamientos personalizados.
+            </p>
+
+            <a class="slide-boton"
+            href="https://wa.me/56971453222"
+            target="_blank">
               Reservar hora
             </a>
+
           </div>
 
           <div class="slide-imagen">
-            <img src="nariz.jpg" alt="Tratamiento de armonización orofacial">
+            <img src="nariz.jpg">
           </div>
 
         </div>
+
       </div>
 
       <div class="carousel-slide">
+
         <div class="slide-contenido">
 
           <div class="slide-texto">
-            <h2>Estética Facial</h2>
-            <p>Tratamientos enfocados en armonía, cuidado y bienestar.</p>
 
-            <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">
+            <h2>Estética Facial</h2>
+
+            <p>
+              Tratamientos enfocados en armonía, cuidado y bienestar.
+            </p>
+
+            <a class="slide-boton"
+            href="https://wa.me/56971453222"
+            target="_blank">
               Agendar evaluación
             </a>
+
           </div>
 
           <div class="slide-imagen">
-            <img src="nariz1.jpg" alt="Resultado de tratamiento estético">
+            <img src="nariz1.jpg">
           </div>
 
         </div>
+
       </div>
 
       <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
@@ -694,47 +638,74 @@
 </section>
 
 <section class="redes-sociales">
+
   <h2>Contáctanos</h2>
 
-  <a class="boton" href="https://instagram.com/rejuvenece__" target="_blank">
+  <a class="boton"
+  href="https://instagram.com/rejuvenece__"
+  target="_blank">
     Instagram
   </a>
 
-  <a class="boton" href="https://wa.me/56971453222" target="_blank">
+  <a class="boton"
+  href="https://wa.me/56971453222"
+  target="_blank">
     WhatsApp
   </a>
+
 </section>
 
 <section class="ubicacion" id="contacto">
 
   <div class="mapa-lado">
-    <a href="https://www.google.com/maps/search/?api=1&query=Av.%20Los%20Pajaritos%203195%20Of%201320%20Santiago%20Chile" target="_blank">
-      <img src="mapa.png" class="mapa-img" alt="Mapa de ubicación de Clínica Dental Rejuvenece">
+
+    <a href="https://www.google.com/maps/search/?api=1&query=Av.%20Los%20Pajaritos%203195%20Oficina%201320%20Santiago%20Chile"
+    target="_blank">
+
+      <img src="mapa.png"
+      class="mapa-img"
+      alt="Mapa Clínica Dental Rejuvenece">
+
     </a>
+
   </div>
 
   <div class="texto-lado">
+
     <h2>Encuéntranos</h2>
+
     <h3>Clínica Dental Rejuvenece</h3>
 
-    <p>Estamos ubicados en Av. Los Pajaritos #3195, Oficina 1320, Piso 13, Santiago, Chile.</p>
+    <p>
+      Estamos ubicados en Av. Los Pajaritos #3195,
+      Oficina 1320, Piso 13, Santiago, Chile.
+    </p>
 
     <a class="link-mapa"
-    href="https://www.google.com/maps/search/?api=1&query=Av.%20Los%20Pajaritos%203195%20Of%201320%20Santiago%20Chile"
+    href="https://www.google.com/maps/search/?api=1&query=Av.%20Los%20Pajaritos%203195%20Oficina%201320%20Santiago%20Chile"
     target="_blank">
+
       Cómo llegar →
+
     </a>
 
-    <p>Agenda tu hora por WhatsApp o contáctanos a través de Instagram.</p>
+    <p>
+      Agenda tu hora por WhatsApp o contáctanos
+      a través de Instagram.
+    </p>
 
-    <a class="boton" href="https://wa.me/56971453222" target="_blank">
+    <a class="boton"
+    href="https://wa.me/56971453222"
+    target="_blank">
       Reservar hora
     </a>
+
   </div>
 
 </section>
 
 <footer>
+
   <div class="footer-contenido">
 
     <div>
@@ -743,27 +714,55 @@
     </div>
 
     <div>
-      <div class="contacto-linea">Av. Los Pajaritos #3195, Oficina 1320, Piso 13, Santiago, Chile</div>
-      <div class="contacto-linea">+56 9 7145 3222</div>
+
       <div class="contacto-linea">
-        <a href="https://instagram.com/rejuvenece__" target="_blank">@Rejuvenece__</a>
+        Av. Los Pajaritos #3195,
+        Oficina 1320,
+        Piso 13,
+        Santiago, Chile
       </div>
+
+      <div class="contacto-linea">
+        +56 9 7145 3222
+      </div>
+
+      <div class="contacto-linea">
+        <a href="https://instagram.com/rejuvenece__"
+        target="_blank">
+          @Rejuvenece__
+        </a>
+      </div>
+
     </div>
 
   </div>
+
 </footer>
 
 <script>
+
 let slideIndex = 0;
+
 const slides = document.querySelectorAll(".carousel-slide");
 const dots = document.querySelectorAll(".dot");
 
 function showSlide(index){
-  if(index >= slides.length){ slideIndex = 0; }
-  if(index < 0){ slideIndex = slides.length - 1; }
 
-  slides.forEach(slide => slide.classList.remove("active"));
-  dots.forEach(dot => dot.classList.remove("active"));
+  if(index >= slides.length){
+    slideIndex = 0;
+  }
+
+  if(index < 0){
+    slideIndex = slides.length - 1;
+  }
+
+  slides.forEach(slide =>
+    slide.classList.remove("active")
+  );
+
+  dots.forEach(dot =>
+    dot.classList.remove("active")
+  );
 
   slides[slideIndex].classList.add("active");
   dots[slideIndex].classList.add("active");
@@ -785,8 +784,10 @@ setInterval(function(){
 }, 4000);
 
 function toggleMenu(){
-  document.getElementById("menu").classList.toggle("active");
+  document.getElementById("menu")
+  .classList.toggle("active");
 }
+
 </script>
 
 </body>
