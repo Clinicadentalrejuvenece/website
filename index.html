@@ -27,7 +27,6 @@
       position:sticky;
       top:0;
       z-index:999;
-      overflow:hidden;
     }
 
     .logo{
@@ -35,7 +34,6 @@
       height:auto;
       object-fit:contain;
       display:block;
-      margin-left:5px;
     }
 
     nav{
@@ -49,11 +47,6 @@
       color:#12384a;
       font-weight:600;
       font-size:17px;
-      transition:0.3s;
-    }
-
-    nav a:hover{
-      opacity:0.7;
     }
 
     .agenda-header{
@@ -74,18 +67,20 @@
 
     .banner{
       background:#dff3fb;
-      padding:14px;
+      padding:14px 20px;
       border-top:1px solid #d2e8f0;
       border-bottom:1px solid #d2e8f0;
     }
 
     .banner span{
+      display:inline-block;
       background:white;
       padding:10px 28px;
       border-radius:35px;
       font-weight:600;
       color:#1d6f88;
       box-shadow:0 2px 10px rgba(0,0,0,0.05);
+      line-height:1.4;
     }
 
     .hero{
@@ -178,11 +173,6 @@
       padding:15px 32px;
       border-radius:35px;
       font-weight:700;
-      transition:0.3s;
-    }
-
-    .slide-boton:hover{
-      transform:scale(1.04);
     }
 
     .slide-imagen{
@@ -268,7 +258,6 @@
 
     .categoria-card:hover{
       transform:translateY(-8px);
-      box-shadow:0 10px 26px rgba(0,0,0,0.14);
       background:#eaf8fb;
     }
 
@@ -340,7 +329,6 @@
       font-size:50px;
       font-weight:800;
       margin-bottom:8px;
-      letter-spacing:-1px;
     }
 
     .texto-lado h3{
@@ -377,10 +365,6 @@
       text-align:left;
     }
 
-    .footer-contenido h3{
-      margin-bottom:10px;
-    }
-
     .footer-contenido p,
     .contacto-linea{
       color:white;
@@ -412,13 +396,13 @@
 
     @media(max-width:768px){
       header{
-        height:82px;
-        padding:0 15px;
+        height:78px;
+        padding:0 18px;
       }
 
       .logo{
-        width:130px;
-        margin-left:0;
+        width:115px;
+        max-height:65px;
       }
 
       .menu-toggle{
@@ -428,26 +412,41 @@
       nav{
         display:none;
         position:absolute;
-        top:100%;
+        top:78px;
         left:0;
         width:100%;
         background:white;
         flex-direction:column;
         padding:18px 0;
         gap:15px;
+        box-shadow:0 8px 18px rgba(0,0,0,0.12);
       }
 
       nav.active{
         display:flex;
       }
 
+      .banner{
+        padding:10px 12px;
+      }
+
+      .banner span{
+        max-width:88%;
+        padding:8px 14px;
+        font-size:14px;
+        line-height:1.35;
+        white-space:normal;
+      }
+
       .hero{
-        padding:35px 15px 25px;
+        padding:32px 15px 25px;
       }
 
       .titulo-clinica{
         font-size:34px;
-        margin-bottom:3px;
+        line-height:1.1;
+        margin-bottom:6px;
+        letter-spacing:-1px;
       }
 
       .subtexto{
@@ -458,6 +457,7 @@
 
       .carousel{
         height:520px;
+        border-radius:28px;
       }
 
       .slide-contenido{
@@ -466,13 +466,15 @@
 
       .slide-texto{
         width:100%;
-        padding:30px;
+        height:48%;
+        padding:30px 55px;
         text-align:center;
         align-items:center;
       }
 
       .slide-texto h2{
-        font-size:36px;
+        font-size:35px;
+        line-height:1.05;
       }
 
       .slide-texto p{
@@ -483,10 +485,23 @@
         font-size:34px;
       }
 
+      .slide-boton{
+        padding:13px 26px;
+      }
+
       .slide-imagen{
         width:100%;
         height:52%;
       }
+
+      .carousel-btn{
+        width:42px;
+        height:42px;
+        font-size:26px;
+      }
+
+      .prev{left:12px;}
+      .next{right:12px;}
 
       .categoria-card{
         width:80%;
@@ -552,68 +567,48 @@
 <section class="hero" id="inicio">
 
   <h1 class="titulo-clinica">Clínica Dental Rejuvenece</h1>
-
   <p class="subtexto">Belleza, salud y confianza en tu sonrisa.</p>
 
   <div class="hero-grid">
-
     <div class="carousel">
 
       <div class="carousel-slide active">
         <div class="slide-contenido">
-
           <div class="slide-texto">
             <h2>Mes de la Mamá</h2>
             <p>Blanqueamiento + Limpieza Dental</p>
             <div class="precio-slide">$90.000</div>
-
-            <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">
-              Obtener beneficio
-            </a>
+            <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">Obtener beneficio</a>
           </div>
-
           <div class="slide-imagen">
             <img src="mama.jpg" alt="Promoción Mes de la Mamá">
           </div>
-
         </div>
       </div>
 
       <div class="carousel-slide">
         <div class="slide-contenido">
-
           <div class="slide-texto">
             <h2>Armonización Orofacial</h2>
             <p>Realza tu belleza natural con tratamientos personalizados.</p>
-
-            <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">
-              Reservar hora
-            </a>
+            <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">Reservar hora</a>
           </div>
-
           <div class="slide-imagen">
             <img src="nariz.jpg" alt="Tratamiento de armonización orofacial">
           </div>
-
         </div>
       </div>
 
       <div class="carousel-slide">
         <div class="slide-contenido">
-
           <div class="slide-texto">
             <h2>Estética Facial</h2>
             <p>Tratamientos enfocados en armonía, cuidado y bienestar.</p>
-
-            <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">
-              Agendar evaluación
-            </a>
+            <a class="slide-boton" href="https://wa.me/56971453222" target="_blank">Agendar evaluación</a>
           </div>
-
           <div class="slide-imagen">
             <img src="nariz1.jpg" alt="Resultado de tratamiento estético">
           </div>
-
         </div>
       </div>
 
@@ -627,13 +622,11 @@
       </div>
 
     </div>
-
   </div>
 </section>
 
 <section class="categorias">
   <div class="categorias-contenedor">
-
     <a class="categoria-card" href="ortodoncia.html">
       <img src="dientes.png" alt="Ortodoncia">
       <h2>Ortodoncia</h2>
@@ -643,24 +636,16 @@
       <img src="cara.png" alt="Estética">
       <h2>Estética</h2>
     </a>
-
   </div>
 </section>
 
 <section class="redes-sociales">
   <h2>Contáctanos</h2>
-
-  <a class="boton" href="https://instagram.com/rejuvenece__" target="_blank">
-    Instagram
-  </a>
-
-  <a class="boton" href="https://wa.me/56971453222" target="_blank">
-    WhatsApp
-  </a>
+  <a class="boton" href="https://instagram.com/rejuvenece__" target="_blank">Instagram</a>
+  <a class="boton" href="https://wa.me/56971453222" target="_blank">WhatsApp</a>
 </section>
 
 <section class="ubicacion" id="contacto">
-
   <div class="mapa-lado">
     <a href="https://www.google.com/maps/search/?api=1&query=Av.%20Los%20Pajaritos%203195%20Oficina%201320%20Santiago%20Chile" target="_blank">
       <img src="mapa.png" class="mapa-img" alt="Mapa Clínica Dental Rejuvenece">
@@ -669,80 +654,42 @@
 
   <div class="texto-lado">
     <h2>Encuéntranos</h2>
-
     <h3>Clínica Dental Rejuvenece</h3>
-
-    <p>
-      Estamos ubicados en Av. Los Pajaritos #3195,
-      Oficina 1320, Piso 13, Santiago, Chile.
-    </p>
-
-    <a class="link-mapa"
-    href="https://www.google.com/maps/search/?api=1&query=Av.%20Los%20Pajaritos%203195%20Oficina%201320%20Santiago%20Chile"
-    target="_blank">
-      Cómo llegar →
-    </a>
-
-    <p>
-      Agenda tu hora por WhatsApp o contáctanos a través de Instagram.
-    </p>
-
-    <a class="boton" href="https://wa.me/56971453222" target="_blank">
-      Reservar hora
-    </a>
+    <p>Estamos ubicados en Av. Los Pajaritos #3195, Oficina 1320, Piso 13, Santiago, Chile.</p>
+    <a class="link-mapa" href="https://www.google.com/maps/search/?api=1&query=Av.%20Los%20Pajaritos%203195%20Oficina%201320%20Santiago%20Chile" target="_blank">Cómo llegar →</a>
+    <p>Agenda tu hora por WhatsApp o contáctanos a través de Instagram.</p>
+    <a class="boton" href="https://wa.me/56971453222" target="_blank">Reservar hora</a>
   </div>
-
 </section>
 
 <footer>
   <div class="footer-contenido">
-
     <div>
       <h3>Clínica Dental Rejuvenece</h3>
       <p>Odontología integral y armonización orofacial</p>
     </div>
 
     <div>
+      <div class="contacto-linea">Av. Los Pajaritos #3195, Oficina 1320, Piso 13, Santiago, Chile</div>
+      <div class="contacto-linea">+56 9 7145 3222</div>
       <div class="contacto-linea">
-        Av. Los Pajaritos #3195, Oficina 1320, Piso 13, Santiago, Chile
-      </div>
-
-      <div class="contacto-linea">
-        +56 9 7145 3222
-      </div>
-
-      <div class="contacto-linea">
-        <a href="https://instagram.com/rejuvenece__" target="_blank">
-          @Rejuvenece__
-        </a>
+        <a href="https://instagram.com/rejuvenece__" target="_blank">@Rejuvenece__</a>
       </div>
     </div>
-
   </div>
 </footer>
 
 <script>
 let slideIndex = 0;
-
 const slides = document.querySelectorAll(".carousel-slide");
 const dots = document.querySelectorAll(".dot");
 
 function showSlide(index){
-  if(index >= slides.length){
-    slideIndex = 0;
-  }
+  if(index >= slides.length){ slideIndex = 0; }
+  if(index < 0){ slideIndex = slides.length - 1; }
 
-  if(index < 0){
-    slideIndex = slides.length - 1;
-  }
-
-  slides.forEach(slide =>
-    slide.classList.remove("active")
-  );
-
-  dots.forEach(dot =>
-    dot.classList.remove("active")
-  );
+  slides.forEach(slide => slide.classList.remove("active"));
+  dots.forEach(dot => dot.classList.remove("active"));
 
   slides[slideIndex].classList.add("active");
   dots[slideIndex].classList.add("active");
