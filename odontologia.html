@@ -61,26 +61,41 @@
     }
 
     .catalogo{
-      max-width:1050px;
+      max-width:1100px;
       margin:45px auto 75px;
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-      gap:18px;
+      grid-template-columns:repeat(auto-fit, minmax(290px, 1fr));
+      gap:20px;
       padding:0 20px;
     }
 
     .item{
       background:white;
-      padding:22px;
-      border-radius:20px;
+      padding:24px;
+      border-radius:22px;
       box-shadow:0 6px 18px rgba(0,0,0,0.08);
-      font-weight:700;
       transition:0.3s;
+      text-align:left;
     }
 
     .item:hover{
       transform:translateY(-5px);
       background:#eaf8fb;
+    }
+
+    .item h2{
+      font-size:19px;
+      margin:0 0 10px;
+      color:#12384a;
+      font-weight:800;
+      line-height:1.3;
+    }
+
+    .descripcion{
+      font-size:14px;
+      color:#555;
+      line-height:1.6;
+      margin:0 0 14px;
     }
 
     .precio{
@@ -132,6 +147,15 @@
       h1{
         font-size:34px;
       }
+
+      .catalogo{
+        grid-template-columns:1fr;
+        padding:0 16px;
+      }
+
+      .item{
+        text-align:center;
+      }
     }
   </style>
 </head>
@@ -155,25 +179,75 @@
 
 <section class="catalogo">
 
-  <div class="item">Contención Removible Superior <span class="precio">$20.000</span><a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a></div>
+  <div class="item">
+    <h2>Contención Removible Superior</h2>
+    <p class="descripcion">Aparato removible utilizado después del tratamiento de ortodoncia para ayudar a mantener la posición lograda de los dientes superiores.</p>
+    <span class="precio">$20.000</span>
+    <a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a>
+  </div>
 
-  <div class="item">Control Final Post Retiro <span class="precio">$36.000</span><a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a></div>
+  <div class="item">
+    <h2>Control Final Post Retiro</h2>
+    <p class="descripcion">Control posterior al retiro de aparatos para evaluar estabilidad, oclusión y uso correcto de las contenciones indicadas.</p>
+    <span class="precio">$36.000</span>
+    <a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a>
+  </div>
 
-  <div class="item">Control Mensual de Ortodoncia <span class="precio">$42.000</span><a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a></div>
+  <div class="item">
+    <h2>Control Mensual de Ortodoncia</h2>
+    <p class="descripcion">Sesión periódica para revisar avances, realizar ajustes y continuar el movimiento dental según el plan de tratamiento.</p>
+    <span class="precio">$42.000</span>
+    <a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a>
+  </div>
 
-  <div class="item">Estudio: Impresión Superior e Inferior <span class="precio">$45.000</span><a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a></div>
+  <div class="item">
+    <h2>Estudio: Impresión Superior e Inferior</h2>
+    <p class="descripcion">Registro de ambas arcadas dentarias para evaluar la mordida, planificar el tratamiento y confeccionar modelos de estudio.</p>
+    <span class="precio">$45.000</span>
+    <a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a>
+  </div>
 
-  <div class="item">Evaluación de Ortodoncia <span class="precio">$10.000</span><a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a></div>
+  <div class="item">
+    <h2>Evaluación de Ortodoncia</h2>
+    <p class="descripcion">Atención inicial para revisar alineación dental, mordida y necesidades del paciente, orientando el plan de tratamiento adecuado.</p>
+    <span class="precio">$10.000</span>
+    <a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a>
+  </div>
 
-  <div class="item">Instalación de Aparatos Fijos <span class="precio">$283.000</span><a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a></div>
+  <div class="item">
+    <h2>Instalación de Aparatos Fijos</h2>
+    <p class="descripcion">Colocación de brackets y elementos de ortodoncia fija para iniciar la corrección progresiva de la posición dental.</p>
+    <span class="precio">$283.000</span>
+    <a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a>
+  </div>
 
-  <div class="item">Instalación de Aparatos Fijos Oferta <span class="precio">$220.000</span><a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a></div>
+  <div class="item">
+    <h2>Instalación de Aparatos Fijos</h2>
+    <p class="descripcion">Alternativa promocional para iniciar tratamiento con aparatos fijos, según evaluación clínica y condiciones del caso.</p>
+    <span class="precio">$220.000</span>
+    <a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a>
+  </div>
 
-  <div class="item">Presupuesto Anual de Controles <span class="precio">$432.000</span><a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a></div>
+  <div class="item">
+    <h2>Presupuesto Anual de Controles</h2>
+    <p class="descripcion">Valor referencial que considera controles de ortodoncia durante un período anual, según planificación del tratamiento.</p>
+    <span class="precio">$432.000</span>
+    <a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a>
+  </div>
 
-  <div class="item">Presupuesto Semestral de Controles <span class="precio">$216.000</span><a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a></div>
+  <div class="item">
+    <h2>Presupuesto Semestral de Controles</h2>
+    <p class="descripcion">Valor referencial que considera controles de ortodoncia durante un período semestral, de acuerdo con el plan indicado.</p>
+    <span class="precio">$216.000</span>
+    <a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a>
+  </div>
 
-  <div class="item">Retiro de Aparatos Fijos y Contención Fija Inferior <span class="precio">$198.000</span><a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a></div>
+  <div class="item">
+    <h2>Retiro de Aparatos Fijos y Contención Fija Inferior</h2>
+    <p class="descripcion">Retiro de brackets al finalizar el tratamiento e instalación de contención fija inferior para ayudar a conservar los resultados.</p>
+    <span class="precio">$198.000</span>
+    <a class="boton" href="https://d855b8927e19494bdd63b32c66758af68a019d08.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank">Agenda ahora</a>
+  </div>
 
 </section>
 
